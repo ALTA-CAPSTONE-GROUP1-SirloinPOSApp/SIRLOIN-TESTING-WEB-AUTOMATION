@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>sauceDemo</artifactId>
+    <artifactId>SIRLOIN-TESTING-WEB-AUTOMATION</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>

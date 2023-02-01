@@ -7,10 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="sauceDemo" />
+        <module name="SIRLOIN-TESTING-WEB-AUTOMATION" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="SIRLOIN-TESTING-WEB-AUTOMATION" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
