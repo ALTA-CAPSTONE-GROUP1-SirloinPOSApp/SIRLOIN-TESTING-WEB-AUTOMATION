@@ -13,7 +13,7 @@ public class Hooks {
         System.setProperty("webdriver.chrome.driver",
                 System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
         webDriver  = new ChromeDriver();
-        String appUrl = "https://www.saucedemo.com/";
+        String appUrl = "https://sirloin-pos.vercel.app/";
         webDriver.get(appUrl);
         webDriver.manage().window().maximize();
     }
