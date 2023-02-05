@@ -10,5 +10,4 @@
       And user input "Mukhlis123" as password on register
       When user click alamat fields
       And user input "jl malang" as alamat
-      And user click register button
 

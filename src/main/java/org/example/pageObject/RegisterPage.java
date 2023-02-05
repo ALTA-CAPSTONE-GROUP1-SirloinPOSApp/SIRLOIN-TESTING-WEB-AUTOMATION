@@ -33,7 +33,7 @@ public class RegisterPage {
         namaToko.sendKeys(toko);
     }
 
-    @FindBy(id="email")
+    @FindBy(xpath="//input[@id='email']")
     private WebElement registerEmail ;
 
     public void clickRegisterEmail(){
