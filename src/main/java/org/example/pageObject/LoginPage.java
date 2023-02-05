@@ -13,6 +13,12 @@ public class LoginPage {
     }
     @FindBy(id ="email")
     private WebElement akunEmail;
+    @FindBy(xpath = "//input[@id='password']")
+    private WebElement akunPassword ;
+    @FindBy(id="login")
+    private WebElement btnLogin;
+    @FindBy(xpath = "//h1[@class='text-center text-[#306D75] font-bold text-5xl mb-11']")
+    private WebElement judulLogin ;
 
     public void clickEmail(){
         akunEmail.click();
@@ -21,23 +27,20 @@ public class LoginPage {
         akunEmail.sendKeys(email); ;
     }
 
-    @FindBy(id = "password")
-    private WebElement akunPassword ;
+
     public void clickPassword(){
         akunPassword.click();
     }
-    public void setPassword(String password){
-        akunPassword.sendKeys(password);
+    public void setPassword(String pwd){
+        akunPassword.sendKeys(pwd);
     }
 
-    @FindBy(id="login")
-    private WebElement btnLogin;
+
     public void clickLogin(){
         btnLogin.click();
     }
 
-    @FindBy(xpath = "//h1[@class='text-center text-[#306D75] font-bold text-5xl mb-11']")
-    private WebElement judulLogin ;
+
     public boolean isDisplayed(){
         judulLogin.isDisplayed();
         return true ;
