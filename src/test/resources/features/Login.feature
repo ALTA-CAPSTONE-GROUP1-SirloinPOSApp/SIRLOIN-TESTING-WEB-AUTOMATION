@@ -7,4 +7,5 @@
      And user input email "mukhlisanshori123@gmail.com"
       When user click password field
       And user input "Mukhlis123" as password
-      Then user click login button
+      And user click login button
+      Then pop up berhasil login is displayed
