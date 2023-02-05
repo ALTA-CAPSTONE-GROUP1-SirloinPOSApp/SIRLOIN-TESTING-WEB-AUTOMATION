@@ -1,0 +1,136 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 13492576800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Login with valid email dan password",
+        "description": "",
+        "id": "login;login-with-valid-email-dan-password",
+        "after": [
+          {
+            "result": {
+              "duration": 1294401600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1278035700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user on the sirloinPOS website",
+            "match": {
+              "location": "LoginSteps.userOnTheSirloinPOSWebsite()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 205427100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user click email field",
+            "match": {
+              "location": "LoginSteps.userClickEmailField()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2323150500,
+              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat StepDef.LoginSteps.userInputEmail(LoginSteps.java:29)\r\n\tat ✽.And user input email \"mukhlisanshori123@gmail.com\"(features/Login.feature:7)\r\n",
+              "status": "pending"
+            },
+            "line": 7,
+            "name": "user input email \"mukhlisanshori123@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "mukhlisanshori123@gmail.com",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginSteps.userInputEmail(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "user click password field",
+            "match": {
+              "location": "LoginSteps.userClickPasswordField()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "user input \"Mukhlis123\" as password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Mukhlis123",
+                  "offset": 12
+                }
+              ],
+              "location": "LoginSteps.userInputAsPassword(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "user click login button",
+            "match": {
+              "location": "LoginSteps.userClickLoginButton()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login",
+    "description": "",
+    "id": "login",
+    "keyword": "Feature",
+    "uri": "features/Login.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Login"
+      },
+      {
+        "line": 1,
+        "name": "@Capstone"
+      }
+    ]
+  }
+]
