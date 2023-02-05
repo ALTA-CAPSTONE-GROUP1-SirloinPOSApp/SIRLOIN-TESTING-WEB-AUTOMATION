@@ -47,8 +47,8 @@ public class RegisterPage {
     public void clickRegisterPassword(){
         registerPassword.click();
     }
-    public void setRegisterPassword(String pass){
-        registerPassword.sendKeys(pass);
+    public void setRegisterPassword(String passDaftar){
+        registerPassword.sendKeys(passDaftar);
     }
 
     @FindBy(id="number-hp")

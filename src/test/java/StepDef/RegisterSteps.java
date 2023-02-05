@@ -26,61 +26,45 @@ public class RegisterSteps {
         registerPage.clickToRegister();
     }
 
-    @When("^user click nama bisnis/toko fields$")
-    public void userClickNamaBisnisTokoFields() {
-        RegisterPage registerPage = new RegisterPage(webDriver);
-        registerPage.clickNamaToko();
-    }
-
     @And("^user input nama bisnis / toko \"([^\"]*)\"$")
-    public void userInputNamaBisnisToko(String toko) throws Throwable {
+    public void userInputNamaBisnisToko(String toko) throws InterruptedException {
         RegisterPage registerPage = new RegisterPage(webDriver);
         registerPage.setNamaToko(toko);
-        throw new PendingException();
+        Thread.sleep(1000);
     }
 
-    @When("^user click email field on register$")
-    public void userClickEmailFieldOnRegister() {
-        RegisterPage registerPage = new RegisterPage(webDriver);
-        registerPage.clickRegisterEmail();
-    }
 
     @And("^user input \"([^\"]*)\" as email$")
-    public void userInputAsEmail(String email) throws Throwable {
+    public void userInputAsEmail(String email) throws InterruptedException {
         RegisterPage registerPage = new RegisterPage(webDriver);
         registerPage.setRegisterEmail(email);
-        throw new PendingException();
-    }
-
-    @When("^user click password field on register$")
-    public void userClickPasswordFieldOnRegister() {
-        RegisterPage registerPage = new RegisterPage(webDriver);
-        registerPage.clickRegisterPassword();
-    }
-
-    @And("^user input \"([^\"]*)\" as password on register$")
-    public void userInputAsPasswordOnRegister(String pass) throws Throwable {
-        RegisterPage registerPage = new RegisterPage(webDriver);
-        registerPage.setRegisterPassword(pass);
-        throw new PendingException();
-    }
-
-    @When("^user click alamat fields$")
-    public void userClickAlamatFields() {
-        RegisterPage registerPage = new RegisterPage(webDriver);
-        registerPage.clickAddress();
+        Thread.sleep(1000);
     }
 
     @And("^user input \"([^\"]*)\" as alamat$")
-    public void userInputAsAlamat(String alamat) throws Throwable {
+    public void userInputAsAlamat(String alamat) throws InterruptedException {
         RegisterPage registerPage = new RegisterPage(webDriver);
         registerPage.setAlamat(alamat);
-        throw new PendingException();
+        Thread.sleep(1000);
     }
 
     @And("^user click register button$")
     public void userClickRegisterButton() {
         RegisterPage registerPage = new RegisterPage(webDriver);
         registerPage.clickRegister();
+    }
+
+    @And("^user input password register have value \"([^\"]*)\"$")
+    public void userInputPasswordRegisterHaveValue(String pwd) throws InterruptedException {
+        RegisterPage registerPage = new RegisterPage(webDriver);
+        registerPage.setRegisterPassword(pwd);
+        Thread.sleep(1000);
+    }
+
+    @And("^user input nomor telephone \"([^\"]*)\"$")
+    public void userInputNomorTelephone(String nohp) throws InterruptedException {
+        RegisterPage registerPage = new RegisterPage(webDriver);
+        registerPage.setNumberHp(nohp);
+
     }
 }
