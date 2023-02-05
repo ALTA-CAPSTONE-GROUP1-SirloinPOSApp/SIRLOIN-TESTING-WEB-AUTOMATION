@@ -95,9 +95,9 @@ public class RegisterPage {
         System.out.println("Button is enabled ? "+registerUser.isEnabled());
     }
 
-    @FindBy(xpath = "//div[@class='swal2-popup swal2-modal swal2-icon-error animate__animated animate__fadeIn animate__faster']")
+    @FindBy(id = "swal2-title")
     private WebElement modal;
-    public void popModal(){
-        modal.isDisplayed();
+    public String popModal(){
+        return modal.getText();
     }
 }

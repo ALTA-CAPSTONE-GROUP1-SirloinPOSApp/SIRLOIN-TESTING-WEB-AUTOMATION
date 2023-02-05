@@ -62,5 +62,5 @@
       And user input nomor telephone "08111111111"
       And user input "jl malang" as alamat
       Then user click register button
-      Then user get modal message gagal
+      Then user get modal message "Gagal Register"
 
