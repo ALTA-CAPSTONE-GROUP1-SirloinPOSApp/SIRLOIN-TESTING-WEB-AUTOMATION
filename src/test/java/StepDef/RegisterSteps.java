@@ -3,8 +3,11 @@ package StepDef;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.example.pageObject.RegisterPage;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class RegisterSteps {
@@ -49,9 +52,10 @@ public class RegisterSteps {
     }
 
     @And("^user click register button$")
-    public void userClickRegisterButton() {
+    public void userClickRegisterButton() throws InterruptedException{
         RegisterPage registerPage = new RegisterPage(webDriver);
         registerPage.clickRegister();
+        Thread.sleep(10000);
     }
 
     @And("^user input password register have value \"([^\"]*)\"$")
@@ -66,5 +70,32 @@ public class RegisterSteps {
         RegisterPage registerPage = new RegisterPage(webDriver);
         registerPage.setNumberHp(nohp);
 
+    }
+
+    @Then("^button register should be disable$")
+    public void buttonRegisterShouldBeDisable() {
+        RegisterPage registerPage = new RegisterPage(webDriver);
+        registerPage.registerDisable();
+    }
+
+    @Then("^pop up message gagal register$")
+    public void popUpMessageGagalRegister() throws InterruptedException{
+
+    }
+
+    @Then("^user have message gagal register$")
+    public void userHaveMessageGagalRegister() throws InterruptedException{
+
+        Alert alert = webDriver.switchTo().alert();
+        String message = webDriver.findElement(By.cssSelector(".swal2-title")).getText();
+        System.out.println(message);
+        Thread.sleep(5000);
+        alert.accept();
+    }
+
+    @Then("^user get modal message gagal$")
+    public void userGetModalMessageGagal() {
+        RegisterPage registerPage = new RegisterPage(webDriver);
+        registerPage.popModal();
     }
 }

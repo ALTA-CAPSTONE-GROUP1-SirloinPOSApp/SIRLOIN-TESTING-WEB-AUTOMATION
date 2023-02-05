@@ -1,78 +1,103 @@
 package org.example.pageObject;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class RegisterPage {
-    public static WebDriver driver ;
-    public RegisterPage(WebDriver driver){
+    public static WebDriver driver;
+
+    public RegisterPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
-        this.driver = driver ;
+        this.driver = driver;
     }
+
     @FindBy(xpath = "//h1[@class='text-center text-[#306D75] font-bold text-5xl mb-11']")
-    private WebElement judulLogin ;
-    public boolean judulIsDisplayed(){
+    private WebElement judulLogin;
+
+    public boolean judulIsDisplayed() {
         judulLogin.isDisplayed();
-        return true ;
+        return true;
     }
-    @FindBy(id="to-register")
-    private WebElement toRegister ;
-    public void clickToRegister(){
+
+    @FindBy(id = "to-register")
+    private WebElement toRegister;
+
+    public void clickToRegister() {
         toRegister.click();
     }
 
-    @FindBy(id="business-name")
-    private WebElement namaToko ;
+    @FindBy(id = "business-name")
+    private WebElement namaToko;
 
-    public void clickNamaToko(){
+    public void clickNamaToko() {
         namaToko.click();
     }
-    public void setNamaToko(String toko){
+
+    public void setNamaToko(String toko) {
         namaToko.sendKeys(toko);
     }
 
-    @FindBy(xpath="//input[@id='email']")
-    private WebElement registerEmail ;
+    @FindBy(xpath = "//input[@id='email']")
+    private WebElement registerEmail;
 
-    public void clickRegisterEmail(){
+    public void clickRegisterEmail() {
         registerEmail.click();
     }
-    public void setRegisterEmail(String email){
+
+    public void setRegisterEmail(String email) {
         registerEmail.sendKeys(email);
     }
-    @FindBy(id="password")
-    private WebElement registerPassword ;
-    public void clickRegisterPassword(){
+
+    @FindBy(id = "password")
+    private WebElement registerPassword;
+
+    public void clickRegisterPassword() {
         registerPassword.click();
     }
-    public void setRegisterPassword(String passDaftar){
+
+    public void setRegisterPassword(String passDaftar) {
         registerPassword.sendKeys(passDaftar);
     }
 
-    @FindBy(id="number-hp")
-    private WebElement setNumberHp ;
-    public void clickNumberHp(){
+    @FindBy(id = "number-hp")
+    private WebElement setNumberHp;
+
+    public void clickNumberHp() {
         setNumberHp.click();
     }
-    public void setNumberHp(String noHp){
+
+    public void setNumberHp(String noHp) {
         setNumberHp.sendKeys(noHp);
     }
 
-    @FindBy(id="address")
-    private WebElement setAddress ;
-    public void clickAddress(){
+    @FindBy(id = "address")
+    private WebElement setAddress;
+
+    public void clickAddress() {
         setAddress.click();
     }
-    public void setAlamat(String alamat){
+
+    public void setAlamat(String alamat) {
         setAddress.sendKeys(alamat);
     }
 
-    @FindBy(id="register")
-    private WebElement registerUser ;
-    public void clickRegister(){
+    @FindBy(id = "register")
+    private WebElement registerUser;
+
+    public void clickRegister() {
         registerUser.click();
     }
 
+    public void registerDisable() {
+        System.out.println("Button is enabled ? "+registerUser.isEnabled());
+    }
+
+    @FindBy(xpath = "//div[@class='swal2-popup swal2-modal swal2-icon-error animate__animated animate__fadeIn animate__faster']")
+    private WebElement modal;
+    public void popModal(){
+        modal.isDisplayed();
+    }
 }
