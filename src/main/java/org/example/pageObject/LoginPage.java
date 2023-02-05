@@ -20,6 +20,9 @@ public class LoginPage {
     @FindBy(xpath = "//h1[@class='text-center text-[#306D75] font-bold text-5xl mb-11']")
     private WebElement judulLogin ;
 
+    @FindBy(xpath = "//h2[@class='swal2-title']")
+    private WebElement logisSuccess ;
+
     public void clickEmail(){
         akunEmail.click();
     }
@@ -44,6 +47,10 @@ public class LoginPage {
     public boolean isDisplayed(){
         judulLogin.isDisplayed();
         return true ;
+    }
+    public boolean berhasilLoginDisplayed(){
+        logisSuccess.isDisplayed();
+        return true;
     }
 
 }

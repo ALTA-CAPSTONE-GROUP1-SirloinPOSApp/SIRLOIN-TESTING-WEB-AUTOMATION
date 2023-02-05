@@ -52,4 +52,11 @@ public class LoginSteps {
         LoginPage loginPage = new LoginPage(webDriver);
         loginPage.isDisplayed() ;
     }
+
+    @Then("^pop up berhasil login is displayed$")
+    public void popUpBerhasilLoginIsDisplayed() throws InterruptedException {
+        LoginPage loginPage=new LoginPage(webDriver);
+        loginPage.berhasilLoginDisplayed();
+        Thread.sleep(10000);
+    }
 }
