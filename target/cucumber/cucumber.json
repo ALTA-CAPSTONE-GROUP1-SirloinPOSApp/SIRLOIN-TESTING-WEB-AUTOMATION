@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 11541030000,
+              "duration": 15184460000,
               "status": "passed"
             },
             "match": {
@@ -14,14 +14,14 @@
             }
           }
         ],
-        "line": 4,
-        "name": "Login with valid email dan password",
+        "line": 3,
+        "name": "Register with valid input",
         "description": "",
-        "id": "login;login-with-valid-email-dan-password",
+        "id": "sirloin-register-user;register-with-valid-input",
         "after": [
           {
             "result": {
-              "duration": 2349004800,
+              "duration": 2390588100,
               "status": "passed"
             },
             "match": {
@@ -34,65 +34,98 @@
         "steps": [
           {
             "result": {
-              "duration": 730381800,
+              "duration": 3688442200,
               "status": "passed"
             },
-            "line": 5,
-            "name": "user on the sirloinPOS website",
+            "line": 4,
+            "name": "user click register field",
             "match": {
-              "location": "LoginSteps.userOnTheSirloinPOSWebsite()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 448023800,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "user click email field",
-            "match": {
-              "location": "LoginSteps.userClickEmailField()"
+              "location": "RegisterSteps.userClickRegisterField()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2512385800,
+              "duration": 413906600,
               "status": "passed"
             },
-            "line": 7,
-            "name": "user input email \"mukhlisanshori123@gmail.com\"",
+            "line": 5,
+            "name": "user click nama bisnis/toko fields",
+            "match": {
+              "location": "RegisterSteps.userClickNamaBisnisTokoFields()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 695767000,
+              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat StepDef.RegisterSteps.userInputNamaBisnisToko(RegisterSteps.java:39)\r\n\tat ✽.And user input nama bisnis / toko \"Toko Barokah\"(features/Register.feature:6)\r\n",
+              "status": "pending"
+            },
+            "line": 6,
+            "name": "user input nama bisnis / toko \"Toko Barokah\"",
             "match": {
               "arguments": [
                 {
-                  "val": "mukhlisanshori123@gmail.com",
-                  "offset": 18
+                  "val": "Toko Barokah",
+                  "offset": 31
                 }
               ],
-              "location": "LoginSteps.userInputEmail(String)"
+              "location": "RegisterSteps.userInputNamaBisnisToko(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 181406200,
-              "status": "passed"
+              "duration": 0,
+              "error_message": "cucumber.runtime.AmbiguousStepDefinitionsException: ✽.When user click email field on register(features/Register.feature:7) matches more than one step definition:\n  ^user click email field on register$ in RegisterSteps.userClickEmailFieldOnRegister()\n  user click email field in LoginSteps.userClickEmailField()\n\r\n\tat cucumber.runtime.RuntimeGlue.stepDefinitionMatch(RuntimeGlue.java:71)\r\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:267)\r\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\r\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:160)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)\r\n\tat com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\r\n",
+              "status": "failed"
             },
-            "line": 8,
-            "name": "user click password field",
+            "line": 7,
+            "name": "user click email field on register",
             "match": {
-              "location": "LoginSteps.userClickPasswordField()"
+              "location": "RegisterSteps.userClickEmailFieldOnRegister()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2250313300,
-              "status": "passed"
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "user input \"mukhlisanshori1997@gmail.com\" as email",
+            "match": {
+              "arguments": [
+                {
+                  "val": "mukhlisanshori1997@gmail.com",
+                  "offset": 12
+                }
+              ],
+              "location": "RegisterSteps.userInputAsEmail(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "error_message": "cucumber.runtime.AmbiguousStepDefinitionsException: ✽.When user click password field on register(features/Register.feature:9) matches more than one step definition:\n  ^user click password field on register$ in RegisterSteps.userClickPasswordFieldOnRegister()\n  user click password field in LoginSteps.userClickPasswordField()\n\r\n\tat cucumber.runtime.RuntimeGlue.stepDefinitionMatch(RuntimeGlue.java:71)\r\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:267)\r\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\r\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:160)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)\r\n\tat com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\r\n",
+              "status": "failed"
             },
             "line": 9,
-            "name": "user input \"Mukhlis123\" as password",
+            "name": "user click password field on register",
+            "match": {
+              "location": "RegisterSteps.userClickPasswordFieldOnRegister()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "error_message": "cucumber.runtime.AmbiguousStepDefinitionsException: ✽.And user input \"Mukhlis123\" as password on register(features/Register.feature:10) matches more than one step definition:\n  ^user input \"([^\"]*)\" as password on register$ in RegisterSteps.userInputAsPasswordOnRegister(String)\n  user input \"([^\"]*)\" as password in LoginSteps.userInputAsPassword(String)\n\r\n\tat cucumber.runtime.RuntimeGlue.stepDefinitionMatch(RuntimeGlue.java:71)\r\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:267)\r\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\r\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:160)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)\r\n\tat com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\r\n",
+              "status": "failed"
+            },
+            "line": 10,
+            "name": "user input \"Mukhlis123\" as password on register",
             "match": {
               "arguments": [
                 {
@@ -100,47 +133,50 @@
                   "offset": 12
                 }
               ],
-              "location": "LoginSteps.userInputAsPassword(String)"
+              "location": "RegisterSteps.userInputAsPasswordOnRegister(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 143992500,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "user click login button",
-            "match": {
-              "location": "LoginSteps.userClickLoginButton()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 97418500,
-              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h2[@class\u003d\u0027swal2-title\u0027]\"}\n  (Session info: chrome\u003d109.0.5414.120)\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: \u00274.1.2\u0027, revision: \u00279a5a329c5a\u0027\nSystem info: host: \u0027DESKTOP-BCDTMLR\u0027, ip: \u0027192.168.1.4\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [0ddb6bafe3a9135b14781a7ad0a2c2d7, findElement {using\u003dxpath, value\u003d//h2[@class\u003d\u0027swal2-title\u0027]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\\Users\\USER\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:12903}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:12903/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 0ddb6bafe3a9135b14781a7ad0a2c2d7\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)\r\n\tat com.sun.proxy.$Proxy21.isDisplayed(Unknown Source)\r\n\tat org.example.pageObject.LoginPage.berhasilLoginDisplayed(LoginPage.java:52)\r\n\tat StepDef.LoginSteps.popUpBerhasilLoginIsDisplayed(LoginSteps.java:59)\r\n\tat ✽.Then pop up berhasil login is displayed(features/Login.feature:11)\r\n",
-              "status": "failed"
+              "status": "skipped"
             },
             "line": 11,
-            "name": "pop up berhasil login is displayed",
+            "name": "user click alamat fields",
             "match": {
-              "location": "LoginSteps.popUpBerhasilLoginIsDisplayed()"
+              "location": "RegisterSteps.userClickAlamatFields()"
             },
-            "keyword": "Then "
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "user input \"jl malang\" as alamat",
+            "match": {
+              "arguments": [
+                {
+                  "val": "jl malang",
+                  "offset": 12
+                }
+              ],
+              "location": "RegisterSteps.userInputAsAlamat(String)"
+            },
+            "keyword": "And "
           }
         ]
       }
     ],
-    "name": "Login",
+    "name": "Sirloin register user",
     "description": "",
-    "id": "login",
+    "id": "sirloin-register-user",
     "keyword": "Feature",
-    "uri": "features/Login.feature",
+    "uri": "features/Register.feature",
     "tags": [
       {
         "line": 1,
-        "name": "@Login"
+        "name": "@Register"
       },
       {
         "line": 1,
