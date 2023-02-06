@@ -56,7 +56,7 @@ public class RegisterSteps {
     public void userClickRegisterButton() throws InterruptedException{
         RegisterPage registerPage = new RegisterPage(webDriver);
         registerPage.clickRegister();
-        Thread.sleep(10000);
+        Thread.sleep(2000);
     }
 
     @And("^user input password register have value \"([^\"]*)\"$")
@@ -100,5 +100,41 @@ public class RegisterSteps {
         Assert.assertEquals(messageFailed,registerPage.popModal() );
         System.out.println(messageFailed);
         System.out.println(registerPage.popModal());
+    }
+
+    @Then("^modal is displayed$")
+    public void modal_is_displayed()  {
+        RegisterPage registerPage = new RegisterPage(webDriver);
+        Assert.assertTrue(registerPage.popModal());
+    }
+
+    @And("^verify title message text is \"([^\"]*)\"$")
+    public void verifyMessageText(String judulModal)  {
+        RegisterPage registerPage = new RegisterPage(webDriver);
+        Assert.assertEquals(judulModal, registerPage.getJudulModal());
+        System.out.println(judulModal);
+
+    }
+
+    @And("^verify massage is \"([^\"]*)\"$")
+    public void verifyMassageIs(String pesanModal)  {
+        RegisterPage registerPage = new RegisterPage(webDriver);
+        Assert.assertEquals(pesanModal, registerPage.getPesanModal());
+        System.out.println(pesanModal);
+        registerPage.setClickModalOk();
+
+    }
+
+    @Then("^user click login text$")
+    public void userClickLoginText() {
+        RegisterPage registerPage = new RegisterPage(webDriver);
+        registerPage.clickLoginOnRegister();
+    }
+
+    @And("^user should redirect to login page with verify title \"([^\"]*)\"$")
+    public void userShouldRedirectToLoginPageWithVerifyTitle(String judulLogin)  {
+        RegisterPage registerPage = new RegisterPage(webDriver);
+        Assert.assertEquals(judulLogin, registerPage.getTitleLogin());
+        System.out.println(judulLogin);
     }
 }
