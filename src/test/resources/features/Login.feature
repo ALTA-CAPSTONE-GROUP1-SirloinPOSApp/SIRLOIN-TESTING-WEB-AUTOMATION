@@ -41,20 +41,3 @@
       And user click login button
       Then see modal unsuccessfully login
       When click OK button modal error
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
