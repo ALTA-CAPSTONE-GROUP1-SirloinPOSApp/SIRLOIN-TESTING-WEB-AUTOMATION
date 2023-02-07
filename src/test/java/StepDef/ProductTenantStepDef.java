@@ -149,71 +149,20 @@ public class ProductTenantStepDef {
     }
 
     @Then("^user click button edit for Kecap ABC$")
-    public void userClickButtonEditForKecapABC() {
+    public void userClickButtonEditForKecapABC() throws InterruptedException {
         ProductTenantPage productTenant = new ProductTenantPage(webDriver);
         productTenant.clickEdit();
+        Thread.sleep(4000);
 
     }
 
 
     @And("^user redirect to edit product and verify title is \"([^\"]*)\"$")
-    public void userRedirectToEditProductAndVerifyTitleIs(String juduledit) {
+    public void userRedirectToEditProductAndVerifyTitleIs(String juduledit) throws InterruptedException {
         ProductTenantPage productTenant = new ProductTenantPage(webDriver);
         Assert.assertEquals(juduledit, productTenant.getTitleEdit());
         System.out.println(juduledit);
+        Thread.sleep(5000);
     }
 
-    @And("^user get placeholder photos \"([^\"]*)\"$")
-    public void userGetPlaceholderPhotos(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
-    @And("^user get placeholder barcode \"([^\"]*)\"$")
-    public void userGetPlaceholderBarcode(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
-    @And("^user get placeholder kategori product \"([^\"]*)\"$")
-    public void userGetPlaceholderKategoriProduct(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
-    @And("^user get placeholder nama suplier \"([^\"]*)\"$")
-    public void userGetPlaceholderNamaSuplier(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
-    @And("^user get placeholder nama product \"([^\"]*)\"$")
-    public void userGetPlaceholderNamaProduct(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
-    @And("^user get placeholder Harga jual \"([^\"]*)\"$")
-    public void userGetPlaceholderHargaJual(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
-    @And("^user get placeholder stok product \"([^\"]*)\"$")
-    public void userGetPlaceholderStokProduct(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
-    @And("^user get placeholder harga beli \"([^\"]*)\"$")
-    public void userGetPlaceholderHargaBeli(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
-    @And("^user get placeholder minimum stok barang \"([^\"]*)\"$")
-    public void userGetPlaceholderMinimumStokBarang(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
 }

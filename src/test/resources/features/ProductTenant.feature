@@ -84,20 +84,3 @@ Feature: Product Tenant
     And user click menu product
     Then user click button edit for Kecap ABC
     And user redirect to edit product and verify title is "Edit Product"
-
-  @ProductTenant @Positive @Capstone
-  Scenario: verify edit data with placeholder saved data before
-    Given user on the sirloinPOS website
-    When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
-    And verify succes login title "Berhasil Login"
-    And user click menu product
-    Then user click button edit for Kecap ABC
-    And user get placeholder photos "abc.jpg"
-    And user get placeholder barcode "001"
-    And user get placeholder kategori product "Kecap"
-    And user get placeholder nama suplier "Pabrik Kecap"
-    And user get placeholder nama product "Kecap ABC"
-    And user get placeholder Harga jual "5000"
-    And user get placeholder stok product "30"
-    And user get placeholder harga beli "3000"
-    And user get placeholder minimum stok barang "5"
