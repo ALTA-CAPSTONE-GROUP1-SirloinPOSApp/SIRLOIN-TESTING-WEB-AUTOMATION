@@ -8,10 +8,16 @@ import cucumber.api.java.en.When;
 import org.example.pageObject.LoginPage;
 import org.example.pageObject.ProductTenantPage;
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
 
-import static StepDef.Hooks.webDriver;
 
 public class ProductTenantStepDef {
+
+    private WebDriver webDriver;
+    public ProductTenantStepDef(){
+        super();
+        this.webDriver = Hooks.webDriver ;
+    }
     @When("^user login with input \"([^\"]*)\" as email and \"([^\"]*)\" as password$")
     public void userInputAsEmailAndAsPassword(String email, String pass) throws InterruptedException {
         LoginPage loginPage = new LoginPage(webDriver);
