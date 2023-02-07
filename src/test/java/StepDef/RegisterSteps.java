@@ -137,4 +137,11 @@ public class RegisterSteps {
         Assert.assertEquals(judulLogin, registerPage.getTitleLogin());
         System.out.println(judulLogin);
     }
+
+    @Then("^user redirect to login page verify title page \"([^\"]*)\"$")
+    public void userRedirectToLoginPageVerifyTitlePage(String judulLogin)  {
+        RegisterPage registerPage = new RegisterPage(webDriver);
+        Assert.assertEquals(judulLogin, registerPage.getTitleLogin());
+        System.out.println(judulLogin);
+    }
 }
