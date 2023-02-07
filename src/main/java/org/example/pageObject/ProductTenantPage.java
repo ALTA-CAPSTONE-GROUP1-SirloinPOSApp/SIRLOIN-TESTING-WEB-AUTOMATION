@@ -64,11 +64,17 @@ public class ProductTenantPage {
     public void setNoBarcode(String barcode){
         noBarcode.sendKeys(barcode);
     }
+    public String getPlaceBarcode(){
+        return noBarcode.getText() ;
+    }
 
     @FindBy(xpath = "//input[@id='category']")
     private WebElement inputKategori ;
     public void setInputKategori(String kategori){
         inputKategori.sendKeys(kategori);
+    }
+    public String getPlaceKategori(){
+        return inputKategori.getText() ;
     }
 
     @FindBy(xpath = "//input[@id='supplier']")
@@ -76,11 +82,17 @@ public class ProductTenantPage {
     public void setInputSuplier(String suplier){
         inputSuplier.sendKeys(suplier);
     }
+    public String getPlaceSuplier(){
+        return inputSuplier.getText();
+    }
 
     @FindBy(xpath = "//input[@id='product_name']")
     private WebElement inputProduct ;
     public void setInputProduct(String namaProduk){
         inputProduct.sendKeys(namaProduk);
+    }
+    public String getPlaceProduct(){
+        return inputProduct.getText();
     }
 
     @FindBy(xpath ="//input[@id='price']" )
@@ -88,21 +100,33 @@ public class ProductTenantPage {
     public void setHargaJual(String hargaJual){
         inputHargaJual.sendKeys(hargaJual);
     }
+    public String getPlaceJuak(){
+        return inputHargaJual.getText();
+    }
 
     @FindBy(xpath = "//input[@id='buying_price']")
     private WebElement inputHargaBeli;
     public void setHargaBeli(String hargaBeli){
         inputHargaBeli.sendKeys(hargaBeli);
     }
+    public String getPlaceBelit(){
+        return inputHargaBeli.getText();
+    }
     @FindBy(xpath = "//input[@id='stock']")
     private WebElement inputStok;
     public void setStokProduk(String stokproduk){
         inputStok.sendKeys(stokproduk);
     }
+    public String getPlaceStok(){
+        return inputStok.getText();
+    }
     @FindBy(xpath = "//input[@id='minimum_stock']" )
     private WebElement inputMinimumStok ;
     public void setMinimumStok(String minStok){
         inputMinimumStok.sendKeys(minStok);
+    }
+    public String getPlaceMinStok(){
+        return inputMinimumStok.getText();
     }
 
     @FindBy(xpath = "//button[@id='save']")
@@ -110,6 +134,22 @@ public class ProductTenantPage {
     public void clickSave(){
         buttonSave.click();
     }
+    public void saveDisable(){
+        System.out.println("Button simpan is enabled ? "+buttonSave.isEnabled());
+    }
+
+    @FindBy(xpath = "//tbody[1]/tr[1]//button[@id='edit-product']")
+    private WebElement buttonEdit ;
+    public void clickEdit(){
+        buttonEdit.click();
+    }
+    @FindBy(xpath ="//h3[@class='flex m-10 font-bold text-2xl text-[#4AA3BA]']")
+    private WebElement titleEdit;
+    public String getTitleEdit(){
+        return titleEdit.getText();
+    }
+
+
 
 
 
