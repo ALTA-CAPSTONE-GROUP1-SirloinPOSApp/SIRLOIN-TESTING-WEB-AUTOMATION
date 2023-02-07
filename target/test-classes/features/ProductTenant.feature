@@ -17,46 +17,7 @@ Feature: Product Tenant
     And user click button Tambah Product
     And user should be redirect "Tambah Product" page
 
-  @ProductTenant @Positive @Capstone
-    Scenario: upload product with valid data input
-    Given user on the sirloinPOS website
-    When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
-    And verify succes login title "Berhasil Login"
-    And user click menu product
-    Then verify title menu is "Product Tenant"
-    And user click button Tambah Product
-    And user should be redirect "Tambah Product" page
-    Given user choose photos from directory
-    And user input nomor barcode "001"
-    And user input kategory product "Kecap"
-    And user input supplier "Pabrik Kecap"
-    And user input minimum stok "5"
-    And user input nama product "Kecap ABC"
-    And user input harga jual "5000"
-    And user input harga beli "3000"
-    And user input stok product "30"
-    Then user click simpan button
-
-  @ProductTenant @Positive @Capstone
-  Scenario: upload product with valid data input
-    Given user on the sirloinPOS website
-    When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
-    And verify succes login title "Berhasil Login"
-    And user click menu product
-    Then verify title menu is "Product Tenant"
-    And user click button Tambah Product
-    And user should be redirect "Tambah Product" page
-    Given user choose photos from directory with file name "bango.jpg"
-    And user input nomor barcode "002"
-    And user input kategory product "Kecap"
-    And user input supplier "Pabrik Kecap"
-    And user input nama product "Kecap Bango"
-    And user input harga jual "7000"
-    And user input harga beli "5000"
-    And user input stok product "50"
-    And user input minimum stok "10"
-    Then user click simpan button
-
+ 
   @ProductTenant @Positive @Capstone
   Scenario Outline: upload product with valid data input
     Given user on the sirloinPOS website

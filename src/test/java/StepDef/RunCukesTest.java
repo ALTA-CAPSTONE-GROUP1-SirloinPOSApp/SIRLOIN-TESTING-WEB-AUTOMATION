@@ -7,11 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-<<<<<<< Updated upstream
         tags = {"@Register"},
-=======
-        tags = {"@Login"},
->>>>>>> Stashed changes
         features = {"classpath:features/"},
         glue = { "classpath:StepDef"},
         plugin= {"pretty","html:target/site/cucumber-pretty","json:target/cucumber/cucumber.json"}
