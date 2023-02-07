@@ -1,18 +1,22 @@
 package StepDef;
 
 import cucumber.api.PendingException;
+import org.example.pageObject.LoginPage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.example.pageObject.LoginPage;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
+import static org.junit.Assert.assertEquals;
+
 public class LoginSteps {
-    private WebDriver webDriver;
-    public LoginSteps(){
+    private final WebDriver webDriver;
+
+    public LoginSteps() {
         super();
-        this.webDriver = Hooks.webDriver ;
+        this.webDriver = Hooks.webDriver;
     }
 
     @When("user click email field")
@@ -50,13 +54,37 @@ public class LoginSteps {
     @Given("user on the sirloinPOS website")
     public void userOnTheSirloinPOSWebsite() {
         LoginPage loginPage = new LoginPage(webDriver);
-        loginPage.isDisplayed() ;
+        loginPage.isDisplayed();
     }
 
-    @Then("^pop up berhasil login is displayed$")
+    @Then("pop up berhasil login is displayed")
     public void popUpBerhasilLoginIsDisplayed() throws InterruptedException {
-        LoginPage loginPage=new LoginPage(webDriver);
+        LoginPage loginPage = new LoginPage(webDriver);
         loginPage.berhasilLoginDisplayed();
         Thread.sleep(10000);
     }
+
+    @Then("^see modal successfully login$")
+    public void seeModalSuccessfullyLogin() {
+        LoginPage.waitSeeModal();
+    }
+
+    @When("^click OK button modal$")
+    public void clickOKButtonModal() {
+        LoginPage.clickOkSeeModal();
+    }
+
+
+    @Then("^see modal unsuccessfully login$")
+    public void seeModalUnsuccessfullyLogin() {
+        LoginPage.waitSeeModalError();
+    }
+
+    @When("^click OK button modal error$")
+    public void clickOKButtonModalError() {
+        LoginPage.clickOkSeeModalError();
+    }
+
 }
+
+
