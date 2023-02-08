@@ -78,28 +78,7 @@ public class RegisterSteps {
         registerPage.registerDisable();
     }
 
-    @Then("^pop up message gagal register$")
-    public void popUpMessageGagalRegister() throws InterruptedException{
 
-    }
-
-    @Then("^user have message gagal register$")
-    public void userHaveMessageGagalRegister() throws InterruptedException{
-
-        Alert alert = webDriver.switchTo().alert();
-        String message = webDriver.findElement(By.cssSelector(".swal2-title")).getText();
-        System.out.println(message);
-        Thread.sleep(5000);
-        alert.accept();
-    }
-
-    @Then("^user get modal message \"([^\"]*)\"$")
-    public void userGetModalMessage(String messageFailed) throws InterruptedException {
-        RegisterPage registerPage = new RegisterPage(webDriver);
-        Assert.assertEquals(messageFailed,registerPage.popModal() );
-        System.out.println(messageFailed);
-        System.out.println(registerPage.popModal());
-    }
 
     @Then("^modal is displayed$")
     public void modal_is_displayed()  {
