@@ -6,14 +6,14 @@ Feature: Product Toko
     Given user on the sirloinPOS website
     When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
     And verify succes login title "Berhasil Login"
-    Then user should be on "Product Toko" page
+    Then user should be "Product Toko" page
 
 
   Scenario: user can click product item
     Given user on the sirloinPOS website
     When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
     And verify succes login title "Berhasil Login"
-    Then user should be on "Product Toko" page
+    Then user should be "Product Toko" page
     And user click product item
     And user click product item2
 
@@ -21,7 +21,7 @@ Feature: Product Toko
     Given user on the sirloinPOS website
     When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
     And verify succes login title "Berhasil Login"
-    Then user should be on "Product Toko" page
+    Then user should be "Product Toko" page
     And user click product item
     And user click product item2
     And verify product item on keranjang
@@ -32,7 +32,7 @@ Feature: Product Toko
     Given user on the sirloinPOS website
     When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
     And verify succes login title "Berhasil Login"
-    Then user should be on "Product Toko" page
+    Then user should be "Product Toko" page
     And user click product item
     And user click product item2
     And verify product item on keranjang
@@ -44,7 +44,7 @@ Feature: Product Toko
     Given user on the sirloinPOS website
     When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
     And verify succes login title "Berhasil Login"
-    Then user should be on "Product Toko" page
+    Then user should be "Product Toko" page
     And user click product item
     And user click product item2
     And verify product item on keranjang
@@ -56,7 +56,7 @@ Feature: Product Toko
     Given user on the sirloinPOS website
     When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
     And verify succes login title "Berhasil Login"
-    Then user should be on "Product Toko" page
+    Then user should be "Product Toko" page
     And user click product item
     And user click product item2
     And verify product item on keranjang
