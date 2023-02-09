@@ -19,8 +19,8 @@ public class ProductTokoSteps {
     }
 
 
-    @Then("^user should be on \"([^\"]*)\" page$")
-    public void userShouldBeOnPage(String titleProductToko) throws InterruptedException {
+    @Then("^user should be \"([^\"]*)\" page$")
+    public void userShouldBePage(String titleProductToko) throws InterruptedException {
         ProductTokoPage productTokoPage = new ProductTokoPage(webDriver);
         Assert.assertEquals(titleProductToko, productTokoPage.getTitleProductToko());
         System.out.println(titleProductToko);
