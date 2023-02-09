@@ -23,24 +23,24 @@ public class EtalaseBelanjaPage {
         return judulEtalase.getText();
     }
 
-    @FindBy(css = ".grid > div:nth-of-type(1) .btn")
+    @FindBy(xpath = "//div[@class='grid grid-cols-4  gap-4 mt-20 sm:grid-cols-2 lg:grid-cols-4']/div[1]//button[@class='btn tracking-wider btn-sm w-32 bg-[#4AA3BA] border-none']")
     private WebElement beliItem1 ;
     public void clickBeliItem1(){
         beliItem1.click();
     }
-    @FindBy(css = ".grid > div:nth-of-type(2) .btn")
+    @FindBy(xpath = "//div[@class='grid grid-cols-4  gap-4 mt-20 sm:grid-cols-2 lg:grid-cols-4']/div[2]//button[@class='btn tracking-wider btn-sm w-32 bg-[#4AA3BA] border-none']")
     private WebElement beliItem2 ;
     public void clickBeliItem2(){
         beliItem2.click();
     }
-    @FindBy(xpath = "//p[.='Mie Sedaap goreng']")
+    @FindBy(xpath = "//p[.='Mentega']")
     private WebElement getItem1 ;
     public boolean getItem1(){
         getItem1.isDisplayed();
         return true ;
     }
 
-    @FindBy(xpath = "//p[.='Mie Sedaap Soto']")
+    @FindBy(xpath = "//p[.='Gula Pasir']")
     private WebElement getItem2 ;
     public boolean getItem2(){
         getItem1.isDisplayed();
@@ -88,12 +88,13 @@ public class EtalaseBelanjaPage {
     public void clickCancel(){
         clickCancel.click();
     }
-    @FindBy(css = ".font-medium.w-full > .p-10 > div > div:nth-of-type(1) #del-product")
+    @FindBy(css = "#del-product")
+
     private WebElement buttonDelete ;
     public void buttonDelete(){
         buttonDelete.click();
     }
-    @FindBy(xpath = "//p[.='Mie Sedaap goreng']")
+    @FindBy(xpath = "//p[.='Mentega']")
     private WebElement cekItem;
     public boolean cekItem(){
         return cekItem.isDisplayed() ;
