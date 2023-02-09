@@ -1,7 +1,7 @@
 
 # Web Automation Testing SirloinPOS
 
-SirloinPOS is a project to help each shop to sell its business products, and help to manage goods in and out. many shops still add/reduce product stock manually. therefore SirloinPOS tries to handle users who change from manual to automatic using this system
+SirloinPOS ini proyek untuk membantu setiap toko untuk menjual produk bisnisnya, dan membantu mengelola barang masuk dan keluar. Banyak toko yang masih menambah/mengurangi stok produk secara manual, oleh karena itu SirloinPOS mencoba menangani pengguna untuk berubah dari manual menjadi otomatis dengan menggunakan sistem ini
 
 
 ![Logo](https://sirloin-pos.vercel.app/assets/logo-07cbfc70.png)
