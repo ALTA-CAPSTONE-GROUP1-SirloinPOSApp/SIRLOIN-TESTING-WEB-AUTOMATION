@@ -1,5 +1,5 @@
 @Login @Capstone
-  Feature: Login
+  Feature: Login Sirloin
 
     @Positif
     Scenario: Login with valid email dan password
@@ -11,6 +11,7 @@
       And user click login button
       Then see modal successfully login
       When click OK button modal
+      Then user should be on "Product Toko" page
 
     @Login @Negative
       Scenario: Login with valid email dan invalid password
