@@ -19,3 +19,4 @@ Feature: Laporan Transaksi
     And user click date until
     And user set date until
     Then user click tampilkan data laporan transaksi
+
