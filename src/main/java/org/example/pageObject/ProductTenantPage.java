@@ -54,6 +54,9 @@ public class ProductTenantPage {
     public void choosePhoto(){
         uploadFoto.sendKeys(pathImage+"abc.jpg");
     }
+    public String textFoto(){
+       return uploadFoto.getText();
+    }
 
     public void pilihFoto(String photosName){
         uploadFoto.sendKeys(pathImage+photosName);
@@ -100,7 +103,7 @@ public class ProductTenantPage {
     public void setHargaJual(String hargaJual){
         inputHargaJual.sendKeys(hargaJual);
     }
-    public String getPlaceJuak(){
+    public String getPlaceJual(){
         return inputHargaJual.getText();
     }
 
@@ -109,7 +112,7 @@ public class ProductTenantPage {
     public void setHargaBeli(String hargaBeli){
         inputHargaBeli.sendKeys(hargaBeli);
     }
-    public String getPlaceBelit(){
+    public String getPlaceBeli(){
         return inputHargaBeli.getText();
     }
     @FindBy(xpath = "//input[@id='stock']")
