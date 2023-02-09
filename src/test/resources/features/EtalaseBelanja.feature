@@ -47,7 +47,7 @@ Feature: Feature Etalase Belanja Product
     And user verify total payment
     And user click order button and redirect payment method
 
-  @Customer @Negative @Capstone
+  @Customer @Positive @Capstone
   Scenario: Verify button cancel is enable
     Given user on the sirloinPOS website
     When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password

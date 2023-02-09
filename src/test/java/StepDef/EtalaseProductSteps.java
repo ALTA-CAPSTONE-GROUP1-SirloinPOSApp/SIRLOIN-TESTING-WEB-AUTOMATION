@@ -35,9 +35,10 @@ public class EtalaseProductSteps {
     }
 
     @And("^verify first item appeared on keranjang feature$")
-    public void verifyFirstItemAppearedOnKeranjangFeature() {
+    public void verifyFirstItemAppearedOnKeranjangFeature() throws InterruptedException {
         EtalaseBelanjaPage etalaseBelanjaPage = new EtalaseBelanjaPage(webDriver);
         etalaseBelanjaPage.getItem1() ;
+        Thread.sleep(1000);
     }
 
     @And("^user click button beli second item$")
