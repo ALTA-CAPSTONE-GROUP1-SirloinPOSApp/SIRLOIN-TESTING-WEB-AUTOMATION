@@ -84,7 +84,6 @@ public class LoginSteps {
     public void clickOKButtonModalError() {
         LoginPage.clickOkSeeModalError();
     }
-
 }
 
 

@@ -121,5 +121,4 @@ public class RegisterSteps {
         RegisterPage registerPage = new RegisterPage(webDriver);
         Assert.assertEquals(judulLogin, registerPage.getTitleLogin());
         System.out.println(judulLogin);
-    }
-}
+    }}

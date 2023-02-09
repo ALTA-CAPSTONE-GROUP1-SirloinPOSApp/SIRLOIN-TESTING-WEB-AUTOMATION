@@ -18,3 +18,4 @@ Feature: Laporan Transaksi
     And user set date from
     And user click date until
     And user set date until
+
