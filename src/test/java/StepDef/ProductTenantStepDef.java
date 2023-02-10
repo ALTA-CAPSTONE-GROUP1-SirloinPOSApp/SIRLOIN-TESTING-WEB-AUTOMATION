@@ -162,7 +162,93 @@ public class ProductTenantStepDef {
         ProductTenantPage productTenant = new ProductTenantPage(webDriver);
         Assert.assertEquals(juduledit, productTenant.getTitleEdit());
         System.out.println(juduledit);
-        Thread.sleep(5000);
+        Thread.sleep(3000);
     }
 
+    @Then("^user update foto kecap \"([^\"]*)\"$")
+    public void userUpdateFotoKecap(String updateNamaFoto) {
+        ProductTenantPage productTenant = new ProductTenantPage(webDriver);
+        productTenant.pilihFoto(updateNamaFoto);
+    }
+
+    @And("^user edit kategori kecap \"([^\"]*)\"$")
+    public void userEditKategoriKecap(String editKategori) {
+        ProductTenantPage productTenant = new ProductTenantPage(webDriver);
+        productTenant.setInputKategori(editKategori);
+    }
+
+    @And("^user edit product name \"([^\"]*)\"$")
+    public void userEditProductName(String editProduct) {
+        ProductTenantPage productTenant = new ProductTenantPage(webDriver);
+        productTenant.setInputProduct(editProduct);
+    }
+
+    @And("^user update stock product \"([^\"]*)\"$")
+    public void userUpdateStockProduct(String updateStok) {
+        ProductTenantPage productTenant = new ProductTenantPage(webDriver);
+        productTenant.setStokProduk(updateStok);
+    }
+
+    @And("^user edit minimum stock barang \"([^\"]*)\"$")
+    public void userEditMinimumStockBarang(String minStok) {
+        ProductTenantPage productTenant = new ProductTenantPage(webDriver);
+        productTenant.setMinimumStok(minStok);
+    }
+
+    @And("^user update harga jual \"([^\"]*)\"$")
+    public void userUpdateHargaJual(String hargaJual) {
+        ProductTenantPage productTenant = new ProductTenantPage(webDriver);
+        productTenant.setHargaJual(hargaJual);
+    }
+
+    @And("^user update harga beli \"([^\"]*)\"$")
+    public void userUpdateHargaBeli(String hargaBeli) {
+        ProductTenantPage productTenant = new ProductTenantPage(webDriver);
+        productTenant.setHargaBeli(hargaBeli);
+    }
+
+    @And("^user click button simpan on edit page$")
+    public void userClickButtonSimpanOnEditPage() throws InterruptedException {
+        ProductTenantPage productTenant = new ProductTenantPage(webDriver);
+        productTenant.clickSave();
+        Thread.sleep(1000);
+    }
+
+    @And("^user get message success edit \"([^\"]*)\"$")
+    public void userGetMessageSuccessEdit(String suksesPesan) {
+        ProductTenantPage productTenant = new ProductTenantPage(webDriver);
+        Assert.assertEquals(suksesPesan, productTenant.getSuccessEdit());
+        productTenant.clickOk();
+
+    }
+
+    @And("^user get message failed \"([^\"]*)\"$")
+    public void userGetMessageFailedEdit(String failedPesan) {
+        ProductTenantPage productTenant = new ProductTenantPage(webDriver);
+        Assert.assertEquals(failedPesan, productTenant.getSuccessEdit());
+        productTenant.clickOk();
+    }
+
+    @And("^user edit barcode with number already used in another product \"([^\"]*)\"$")
+    public void userEditBarcodeWithNumberAlreadyUsedInAnotherProduct(String editBarcode){
+        ProductTenantPage productTenant = new ProductTenantPage(webDriver);
+        productTenant.setNoBarcode(editBarcode);
+
+    }
+
+    @Then("^user input \"([^\"]*)\" from fitur search product tenant$")
+    public void userInputFromFiturSearchProductTenant(String searchProduct) throws InterruptedException {
+        ProductTenantPage productTenant = new ProductTenantPage(webDriver);
+        productTenant.cariBarang(searchProduct);
+        Thread.sleep(1000);
+
+    }
+
+    @And("^product first name with value Kec displayed$")
+    public void productFirstNameWithValueKecDisplayed() {
+        ProductTenantPage productTenant = new ProductTenantPage(webDriver);
+        productTenant.getKecapABC();
+        productTenant.getKecapBango();
+
+    }
 }
