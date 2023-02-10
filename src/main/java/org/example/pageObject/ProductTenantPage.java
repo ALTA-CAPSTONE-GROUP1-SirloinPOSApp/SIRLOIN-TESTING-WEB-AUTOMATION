@@ -65,6 +65,7 @@ public class ProductTenantPage {
     @FindBy(xpath = "//input[@id='upc']")
     private WebElement noBarcode ;
     public void setNoBarcode(String barcode){
+        noBarcode.clear();
         noBarcode.sendKeys(barcode);
     }
     public String getPlaceBarcode(){
@@ -73,7 +74,11 @@ public class ProductTenantPage {
 
     @FindBy(xpath = "//input[@id='category']")
     private WebElement inputKategori ;
+
+
     public void setInputKategori(String kategori){
+        inputKategori.click();
+        inputKategori.clear();
         inputKategori.sendKeys(kategori);
     }
     public String getPlaceKategori(){
@@ -82,7 +87,9 @@ public class ProductTenantPage {
 
     @FindBy(xpath = "//input[@id='supplier']")
     private WebElement inputSuplier ;
+
     public void setInputSuplier(String suplier){
+        inputSuplier.clear();
         inputSuplier.sendKeys(suplier);
     }
     public String getPlaceSuplier(){
@@ -92,6 +99,7 @@ public class ProductTenantPage {
     @FindBy(xpath = "//input[@id='product_name']")
     private WebElement inputProduct ;
     public void setInputProduct(String namaProduk){
+        inputProduct.clear();
         inputProduct.sendKeys(namaProduk);
     }
     public String getPlaceProduct(){
@@ -100,7 +108,10 @@ public class ProductTenantPage {
 
     @FindBy(xpath ="//input[@id='price']" )
     private WebElement inputHargaJual ;
+    private WebElement editHargaJual ;
+
     public void setHargaJual(String hargaJual){
+        inputHargaJual.clear();
         inputHargaJual.sendKeys(hargaJual);
     }
     public String getPlaceJual(){
@@ -109,7 +120,10 @@ public class ProductTenantPage {
 
     @FindBy(xpath = "//input[@id='buying_price']")
     private WebElement inputHargaBeli;
+
     public void setHargaBeli(String hargaBeli){
+
+        inputHargaBeli.clear();
         inputHargaBeli.sendKeys(hargaBeli);
     }
     public String getPlaceBeli(){
@@ -117,7 +131,9 @@ public class ProductTenantPage {
     }
     @FindBy(xpath = "//input[@id='stock']")
     private WebElement inputStok;
+
     public void setStokProduk(String stokproduk){
+        inputStok.clear();
         inputStok.sendKeys(stokproduk);
     }
     public String getPlaceStok(){
@@ -125,7 +141,9 @@ public class ProductTenantPage {
     }
     @FindBy(xpath = "//input[@id='minimum_stock']" )
     private WebElement inputMinimumStok ;
+
     public void setMinimumStok(String minStok){
+        inputMinimumStok.clear();
         inputMinimumStok.sendKeys(minStok);
     }
     public String getPlaceMinStok(){
@@ -134,6 +152,9 @@ public class ProductTenantPage {
 
     @FindBy(xpath = "//button[@id='save']")
     private WebElement buttonSave ;
+    public void saveUpdate(){
+        buttonSave.click();
+    }
     public void clickSave(){
         buttonSave.click();
     }
@@ -141,7 +162,7 @@ public class ProductTenantPage {
         System.out.println("Button simpan is enabled ? "+buttonSave.isEnabled());
     }
 
-    @FindBy(xpath = "//tbody[1]/tr[1]//button[@id='edit-product']")
+    @FindBy(xpath = "//tbody[1]/tr[1]//button[2]")
     private WebElement buttonEdit ;
     public void clickEdit(){
         buttonEdit.click();
@@ -150,6 +171,35 @@ public class ProductTenantPage {
     private WebElement titleEdit;
     public String getTitleEdit(){
         return titleEdit.getText();
+    }
+
+
+    @FindBy(xpath ="//div[@class='swal2-html-container']" )
+    private WebElement getMessageEdit ;
+    public String getSuccessEdit(){
+        return getMessageEdit.getText() ;
+    }
+    @FindBy(xpath ="//button[@class='swal2-confirm swal2-styled swal2-default-outline']" )
+    private WebElement okMessagge ;
+    public void clickOk(){
+        okMessagge.click();
+    }
+    @FindBy(xpath = "//input[@id='input-product']")
+    private WebElement searchBarang;
+    public void cariBarang(String barang){
+        searchBarang.click();
+        searchBarang.sendKeys(barang);
+    }
+    @FindBy(xpath = "//td[.='Kecap ABC']")
+    private WebElement kecapABC ;
+    public boolean getKecapABC(){
+        return kecapABC.isDisplayed();
+    }
+
+    @FindBy(xpath = "//td[.='Kecap Bango']" )
+    private WebElement kecapBango ;
+    public boolean getKecapBango(){
+        return kecapBango.isDisplayed();
     }
 
 
