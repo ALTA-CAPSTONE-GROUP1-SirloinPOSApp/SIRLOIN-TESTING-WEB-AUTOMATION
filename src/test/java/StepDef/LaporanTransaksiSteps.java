@@ -61,4 +61,16 @@ public class LaporanTransaksiSteps {
         Thread.sleep(2000);
 
     }
+
+    @And("^user verify laporan transaksi is displayed$")
+    public void userVerifyLaporanTransaksiIsDisplayed() {
+    }
+
+    @And("^user get text no transaksi$")
+    public void userGetTextNoTransaksi() {
+    }
+
+    @And("^user get text status transaksi$")
+    public void userGetTextStatusTransaksi() {
+    }
 }
