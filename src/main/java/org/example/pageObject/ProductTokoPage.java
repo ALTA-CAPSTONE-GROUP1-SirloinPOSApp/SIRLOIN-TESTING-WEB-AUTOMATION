@@ -14,9 +14,9 @@ public class ProductTokoPage {
         this.driver = driver;
     }
 
-
     @FindBy(xpath = "//h3[@class='font-bold text-3xl text-[#4AA3BA]']")
     private WebElement titleProductToko;
+
 
     public String getTitleProductToko() {
         return titleProductToko.getText();
@@ -27,7 +27,7 @@ public class ProductTokoPage {
         return true;
     }
 
-    @FindBy(xpath = "//div[.='Kecap ABCRp. 5.000.-Stock: 5']")
+    @FindBy(css = ".grid-cols-4 > div:nth-of-type(1)")
     private static WebElement itemProduct;
 
     public static void clickProduct() {
@@ -42,7 +42,7 @@ public class ProductTokoPage {
         return true;
     }
 
-    @FindBy(xpath = "//div[.='Minyak FortuneRp. 39.000.-Stock: 100']")
+    @FindBy(css = ".grid-cols-4 > div:nth-of-type(4)")
     private static WebElement itemProduct2;
 
     public static void clickProduct2() {
@@ -84,8 +84,68 @@ public class ProductTokoPage {
         buttonDel.click();
     }
 
+    @FindBy(id = "customer_id")
+    private WebElement noMember;
 
+    public void clickInputMember() {
+        noMember.click();
+    }
+
+    public void setNoMember(String member) {
+        noMember.sendKeys(member);
+    }
+
+    @FindBy(id = "select-member")
+    private WebElement btnMember;
+
+    public void clickMember() {
+        btnMember.click();
+    }
+
+    @FindBy(css = ".py-10 > div:nth-of-type(1) > p:nth-of-type(2)")
+    private static WebElement subTotal;
+    @FindBy(css = ".py-10 > div:nth-of-type(2) > p:nth-of-type(2)")
+    private static WebElement diskonMember;
+    @FindBy(css = ".py-10 > div:nth-of-type(3) > p:nth-of-type(2)")
+    private static WebElement totalBelanja;
+
+
+    public String verifySubTotal(){
+        return subTotal.getText();
+    }
+    public String verifyPriceDiskonMember(){
+        return diskonMember.getText();
+    }
+    public String verifyPriceTotalBelanja(){
+        return totalBelanja.getText();
+    }
+
+    @FindBy(xpath = "//button[@id='order']")
+    private static WebElement buttonBayar;
+
+    public static void buttonBayar() {
+        buttonBayar.click();
+    }
+    @FindBy(id = "input-product")
+    private WebElement searchBarang;
+
+    public void clickInputBarang() {
+        searchBarang.click();
+    }
+
+    public void setSearchBarang(String barang) {
+        searchBarang.sendKeys(barang);
+    }
 }
+
+
+
+
+
+
+
+
+
 
 
 
