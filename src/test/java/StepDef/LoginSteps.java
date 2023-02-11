@@ -64,8 +64,8 @@ public class LoginSteps {
         Thread.sleep(10000);
     }
 
-    @Then("^see modal successfully login$")
-    public void seeModalSuccessfullyLogin() {
+    @Then("^see modal successfully$")
+    public void seeModalSuccessfully() {
         LoginPage.waitSeeModal();
     }
 
@@ -84,6 +84,8 @@ public class LoginSteps {
     public void clickOKButtonModalError() {
         LoginPage.clickOkSeeModalError();
     }
+
+
 }
 
 
