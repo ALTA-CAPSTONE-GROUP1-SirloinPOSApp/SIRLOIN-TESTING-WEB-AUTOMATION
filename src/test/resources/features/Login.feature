@@ -9,9 +9,9 @@
       When user click password field
       And user input "Mukhlis11111" as password
       And user click login button
-      Then see modal successfully login
+      Then see modal successfully
       When click OK button modal
-      Then user should be on "Product Toko" page
+      Then user should be "Product Toko" page
 
     @Login @Negative
       Scenario: Login with valid email dan invalid password

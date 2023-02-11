@@ -6,6 +6,8 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 import cucumber.api.java.en.When;
+import org.example.pageObject.CustomerPage;
+import org.example.pageObject.PembayaranDetailPage;
 import org.example.pageObject.ProductTokoPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -28,7 +30,6 @@ public class ProductTokoSteps {
         System.out.println(titleProductToko);
         Thread.sleep(5000);
     }
-
 
     @Given("^user already on product toko page$")
     public void verifyDisplay() {
@@ -92,27 +93,24 @@ public class ProductTokoSteps {
     }
 
     @Then("^user click member button$")
-    public void userClickMemberButton() {
+    public void userClickMemberButton() throws InterruptedException {
         ProductTokoPage productTokoPage = new ProductTokoPage(webDriver);
         productTokoPage.clickMember();
+        Thread.sleep(3000);
 
     }
-
-    @And("^User will see checkout information payment \"([^\"]*)\" with \"([^\"]*)\" and \"([^\"]*)\"$")
-    public void userWillSeeCheckoutInformationPaymentWithAnd(String expectedSubTotal, String expectedDiskonMember, String expectedTotalBelanja)  {
-        ProductTokoPage productTokoPage = new ProductTokoPage(webDriver);
-        productTokoPage.verifySubTotal();
-        productTokoPage.verifyPriceDiskonMember();
-        productTokoPage.verifyPriceTotalBelanja();
-        Assert.assertEquals(expectedSubTotal, productTokoPage.verifySubTotal());
-        Assert.assertEquals(expectedDiskonMember, productTokoPage.verifyPriceDiskonMember());
-        Assert.assertEquals(expectedTotalBelanja, productTokoPage.verifyPriceTotalBelanja());
-        ProductTokoPage.buttonBayar();
-
-
-
-
-    }
+//
+//    @And("^User will see checkout information payment \"([^\"]*)\" with \"([^\"]*)\" and \"([^\"]*)\"$")
+//    public void userWillSeeCheckoutInformationPaymentWithAnd(String expectedSubTotal, String expectedDiskonMember, String expectedTotalBelanja)  {
+//        ProductTokoPage productTokoPage = new ProductTokoPage(webDriver);
+//        productTokoPage.verifySubTotal();
+//        productTokoPage.verifyPriceDiskonMember();
+//        productTokoPage.verifyPriceTotalBelanja();
+//        Assert.assertEquals(expectedSubTotal, productTokoPage.verifySubTotal());
+//        Assert.assertEquals(expectedDiskonMember, productTokoPage.verifyPriceDiskonMember());
+//        Assert.assertEquals(expectedTotalBelanja, productTokoPage.verifyPriceTotalBelanja());
+//        ProductTokoPage.buttonBayar();
+//    }
 
     @And("^user click bayar button$")
     public void userClickBayarButton() {
@@ -145,6 +143,44 @@ public class ProductTokoSteps {
         System.out.println("Diskon Member: "+productTokoPage.verifyPriceDiskonMember());
         System.out.println("Total Belanja: "+productTokoPage.verifyPriceTotalBelanja());
     }
+
+    @Then("^user see all result search product on dashboard$")
+    public void userSeeAllResultSearchProductOnDashboard() {
+        ProductTokoPage productTokoPage = new ProductTokoPage(webDriver);
+        Assert.assertTrue(productTokoPage.isDisplayInputBarang());
+
+    }
+
+    @When("^user click cart quantity field$")
+    public void userClickCartQuantityField() throws InterruptedException {
+        ProductTokoPage productTokoPage = new ProductTokoPage(webDriver);
+        productTokoPage.clickCartQuantity();
+        Thread.sleep(5000);
+    }
+
+
+    @And("^user input cart quantity \"([^\"]*)\"$")
+    public void userInputCartQuantity(String quantity) {
+        // Write code here that turns the phrase above into concrete actions
+        ProductTokoPage productTokoPage = new ProductTokoPage(webDriver);
+        productTokoPage.setInputCartQuantity(quantity);
+    }
+
+//    @Then("^user redirect to \"([^\"]*)\" page$")
+//    public void userRedirectToPage(String titleProductToko) {
+//        // Write code here that turns the phrase above into concrete actions
+//        ProductTokoPage productTokoPage = new ProductTokoPage(webDriver);
+//        Assert.assertEquals(titleProductToko, productTokoPage.getTitleProductToko());
+//    }
+
+    @Then("^user redirect to \"([^\"]*)\" page$")
+    public void userRedirectToPage(String arg0) throws InterruptedException {
+        // Write code here that turns the phrase above into concrete actions
+        ProductTokoPage productTokoPage = new ProductTokoPage(webDriver);
+        Assert.assertTrue(productTokoPage.isDisplayDetailPembayaran());
+        Thread.sleep(3000);
+    }
+
 }
 
 

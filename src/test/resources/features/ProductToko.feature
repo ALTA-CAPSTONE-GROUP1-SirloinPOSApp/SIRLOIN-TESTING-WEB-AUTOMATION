@@ -1,13 +1,11 @@
 Feature: Product Toko
 
-  @ProductTenant @Positive @Capstone
-
-  Scenario: Verify menu home enable
+  @ProductToko @Positive @Capstone
+  Scenario: Verify menu home
     Given user on the sirloinPOS website
     When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
     And verify succes login title "Berhasil Login"
     Then user should be "Product Toko" page
-
 
   Scenario: user search item product
     Given user on the sirloinPOS website
@@ -16,8 +14,7 @@ Feature: Product Toko
     Then user should be "Product Toko" page
     When user click search barang
     And user input barang  "kecap"
-    Then user see
-
+    Then user see all result search product on dashboard
 
   Scenario: user can click product item
     Given user on the sirloinPOS website
@@ -50,17 +47,17 @@ Feature: Product Toko
     And user click button decrement ten items
     Then user delete item in list keranjang
 
-  Scenario: user can delete product
-    Given user on the sirloinPOS website
-    When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
-    And verify succes login title "Berhasil Login"
-    Then user should be "Product Toko" page
-    And user click product item
-    And user click product item2
-    And verify product item on keranjang
-    And user click button increment twenty items
-    And user click button decrement ten items
-    Then user delete item in list keranjang
+#  Scenario: user can delete product
+#    Given user on the sirloinPOS website
+#    When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
+#    And verify succes login title "Berhasil Login"
+#    Then user should be "Product Toko" page
+#    And user click product item
+#    And user click product item2
+#    And verify product item on keranjang
+#    And user click button increment twenty items
+#    And user click button decrement ten items
+#    Then user delete item in list keranjang
 
   Scenario: user can buying item product from product toko
     Given user on the sirloinPOS website
@@ -73,6 +70,17 @@ Feature: Product Toko
     And user click button increment twenty items
     And user click button decrement ten items
     Then user delete item in list keranjang
+
+  Scenario: user input menambahkan cart quantity manual
+    Given user on the sirloinPOS website
+    When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
+    And verify succes login title "Berhasil Login"
+    Then user should be "Product Toko" page
+    And user click product item
+    And user click product item2
+    And verify product item on keranjang
+    When user click cart quantity field
+    And user input cart quantity "15"
 
   Scenario: user can discount member
     Given user on the sirloinPOS website
@@ -103,38 +111,6 @@ Feature: Product Toko
     When user click member field
     And user input member "18"
     Then user click member button
-    And user click bayar button
     And user verify value sub total, diskon member, total belanja
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    And user click bayar button
+    Then user redirect to "Pembayaran Detail" page

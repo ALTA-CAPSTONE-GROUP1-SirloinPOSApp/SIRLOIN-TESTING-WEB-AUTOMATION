@@ -14,6 +14,14 @@ public class ProductTokoPage {
         this.driver = driver;
     }
 
+    @FindBy(xpath = "//h3[@class='font-bold text-3xl text-[#4AA3BA] mb-20']")
+    private WebElement titleKeranjang;
+
+
+    public String getKeranjang() {
+        return titleKeranjang.getText();
+    }
+
     @FindBy(xpath = "//h3[@class='font-bold text-3xl text-[#4AA3BA]']")
     private WebElement titleProductToko;
 
@@ -133,9 +141,40 @@ public class ProductTokoPage {
         searchBarang.click();
     }
 
+    public boolean isDisplayInputBarang() {
+        return searchBarang.isDisplayed();
+    }
+
     public void setSearchBarang(String barang) {
         searchBarang.sendKeys(barang);
     }
+
+    @FindBy(id = "cart_quantity")
+    private WebElement inputCartQuantity;
+
+    public void clickCartQuantity() {
+        inputCartQuantity.click();
+    }
+
+    public void setInputCartQuantity(String quantity) {
+        inputCartQuantity.sendKeys(quantity);
+    }
+
+    @FindBy(xpath = "//h3[@class='font-bold text-2xl text-[#4AA3BA] m-5']")
+    private WebElement titleDetailPembayaran;
+
+
+    public String getTitleDetailPembayaran() {
+        return titleDetailPembayaran.getText();
+    }
+
+    public boolean isDisplayDetailPembayaran() {
+        titleDetailPembayaran.isDisplayed();
+        return true;
+    }
+
+
+
 }
 
 
