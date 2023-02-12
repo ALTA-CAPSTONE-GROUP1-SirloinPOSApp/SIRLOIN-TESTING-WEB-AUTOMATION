@@ -2,6 +2,7 @@ package StepDef;
 
 
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 
@@ -92,9 +93,24 @@ public class PembayaranDetailSteps {
 
     @Then("^see modal gagal$")
     public void seeModalGagal() {
-        PembayaranDetailPage.waitSeeModalScaBarcode();
+        PembayaranDetailPage pembayaranDetailPage = new PembayaranDetailPage(webDriver);
+        pembayaranDetailPage.waitSeeModalScaBarcode();
         }
+
+    @And("^user input value quantity product is \"([^\"]*)\"$")
+    public void userInputValueQuantityProductIs(String jumlah) {
+        PembayaranDetailPage pembayaranDetailPage = new PembayaranDetailPage(webDriver);
+        pembayaranDetailPage.setQuantity(jumlah);
     }
+
+    @Then("^see modal gagal quantity is not enough$")
+    public void seeModalGagalQuantityIsNotEnough() {
+    }
+
+    @When("^click OK button modal gagal payment$")
+    public void clickOKButtonModalGagalPayment() {
+    }
+}
 
 
 
