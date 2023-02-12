@@ -113,6 +113,24 @@ public class PembayaranDetailPage {
         WebElement modalAcceptButton = modalContainer.findElement(By.cssSelector("//button[@class='swal2-confirm swal2-styled swal2-default-outline']']"));
         modalAcceptButton.click();
     }
+    @FindBy(xpath = "//input[@id='cart_quantity']")
+    private WebElement inputQunatity ;
+    public void setQuantity(String jumlah){
+        inputQunatity.click();
+        inputQunatity.clear();
+        inputQunatity.sendKeys(jumlah);
+    }
+
+    @FindBy(css="//h2[@class='swal2-title']")
+    private WebElement gagal ;
+    public boolean modalGagal(){
+        return gagal.isDisplayed() ;
+    }
+    @FindBy(xpath = "//button[@class='swal2-confirm swal2-styled swal2-default-outline']")
+    private WebElement okGagal ;
+    public void clickOkGagal(){
+        okGagal.click();
+    }
 
 
 
