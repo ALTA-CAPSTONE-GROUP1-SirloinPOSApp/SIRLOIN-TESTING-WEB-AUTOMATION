@@ -1,7 +1,7 @@
 @Login @Capstone
   Feature: Login Sirloin
 
-    @Positif
+    @Login @Positif
     Scenario: Login with valid email dan password
       Given user on the sirloinPOS website
       When user click email field
