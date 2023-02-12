@@ -73,7 +73,32 @@ public class PembayaranDetailSteps {
     public void clickOKButtonModalScanBarcode() {
         PembayaranDetailPage.clickOkSeeModalScanBarcode();
     }
-}
+
+    @And("^user sort pembayaran list by gopay$")
+    public void userSortPembayaranListByGopay() throws InterruptedException {
+        PembayaranDetailPage pembayaranDetailPage = new PembayaranDetailPage(webDriver);
+        String c = "Gopay";
+        pembayaranDetailPage.selectPembayaranContainer(c);
+        Thread.sleep(10000);
+    }
+
+    @And("^user sort pembayaran list by shopeepay$")
+    public void userSortPembayaranListByShopeepay() throws InterruptedException {
+        PembayaranDetailPage pembayaranDetailPage = new PembayaranDetailPage(webDriver);
+        String d = "ShopeePay";
+        pembayaranDetailPage.selectPembayaranContainer(d);
+        Thread.sleep(10000);
+    }
+
+    @Then("^see modal gagal$")
+    public void seeModalGagal() {
+        PembayaranDetailPage.waitSeeModalScaBarcode();
+        }
+    }
+
+
+
+
 
 
 

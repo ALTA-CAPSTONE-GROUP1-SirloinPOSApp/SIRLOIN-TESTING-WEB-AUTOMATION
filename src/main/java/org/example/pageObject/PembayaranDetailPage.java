@@ -104,6 +104,16 @@ public class PembayaranDetailPage {
         modalAcceptButton.click();
     }
 
+    public static void waitSeeModalScanGagal(){
+        WebDriverWait wait = new WebDriverWait(driver,30);
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector(".swal2-container")));
+    }
+    public static void clickOkSeeModalScanGagal() {
+        WebElement modalContainer = driver.findElement(By.cssSelector(".swal2-popup']"));
+        WebElement modalAcceptButton = modalContainer.findElement(By.cssSelector("//button[@class='swal2-confirm swal2-styled swal2-default-outline']']"));
+        modalAcceptButton.click();
+    }
+
 
 
 

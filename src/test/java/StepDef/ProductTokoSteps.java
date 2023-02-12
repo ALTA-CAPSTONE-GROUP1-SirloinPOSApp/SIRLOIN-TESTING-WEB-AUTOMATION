@@ -181,6 +181,11 @@ public class ProductTokoSteps {
         Thread.sleep(3000);
     }
 
+    @And("^user click button increment eighty items$")
+    public void userClickButtonIncrementEightyItems() {
+        ProductTokoPage productTokoPage = new ProductTokoPage(webDriver);
+        productTokoPage.setClickIncMore();
+    }
 }
 
 
