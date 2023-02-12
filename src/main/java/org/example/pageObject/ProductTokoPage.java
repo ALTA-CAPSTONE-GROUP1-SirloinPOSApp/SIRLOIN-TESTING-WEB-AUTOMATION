@@ -75,6 +75,7 @@ public class ProductTokoPage {
 
     }
 
+
     @FindBy(xpath = "//div[@class='md:text-xs lg:text-base']/div[1]//button[@id='dec-product']")
     private WebElement clickDec;
 
@@ -118,13 +119,15 @@ public class ProductTokoPage {
     private static WebElement totalBelanja;
 
 
-    public String verifySubTotal(){
+    public String verifySubTotal() {
         return subTotal.getText();
     }
-    public String verifyPriceDiskonMember(){
+
+    public String verifyPriceDiskonMember() {
         return diskonMember.getText();
     }
-    public String verifyPriceTotalBelanja(){
+
+    public String verifyPriceTotalBelanja() {
         return totalBelanja.getText();
     }
 
@@ -134,6 +137,7 @@ public class ProductTokoPage {
     public static void buttonBayar() {
         buttonBayar.click();
     }
+
     @FindBy(id = "input-product")
     private WebElement searchBarang;
 
@@ -173,12 +177,15 @@ public class ProductTokoPage {
         return true;
     }
 
+    @FindBy(xpath = "//button[@id='inc-product']]")
+    private WebElement clickIncMore;
 
-
+    public void setClickIncMore() {
+        for (int i = 0; i < 80; i++) {
+            clickInc.click();
+        }
+    }
 }
-
-
-
 
 
 
