@@ -17,4 +17,11 @@ public class ProductSuperAdminPage {
     public String getProductPage(){
         return productPage.getText() ;
     }
+
+    @FindBy(xpath = "//td[.='Kecap ABC']")
+    private WebElement kecapabc ;
+    public boolean getKecap(){
+        kecapabc.isDisplayed();
+        return true ;
+    }
 }
