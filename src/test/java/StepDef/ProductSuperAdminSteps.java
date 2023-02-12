@@ -1,6 +1,7 @@
 package StepDef;
 
 import cucumber.api.PendingException;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.example.pageObject.ProductSuperAdminPage;
 import org.example.pageObject.ProductTenantPage;
@@ -17,5 +18,11 @@ public class ProductSuperAdminSteps {
     public void adminShouldBeRedirectToListPage(String judul) {
         ProductSuperAdminPage productSuperAdminPage = new ProductSuperAdminPage(webDriver) ;
         Assert.assertEquals(judul, productSuperAdminPage.getProductPage());
+    }
+
+    @And("^admin verify product kecap is displayed$")
+    public void adminVerifyProductKecapIsDisplayed() {
+        ProductSuperAdminPage productSuperAdminPage = new ProductSuperAdminPage(webDriver);
+        productSuperAdminPage.getKecap() ;
     }
 }

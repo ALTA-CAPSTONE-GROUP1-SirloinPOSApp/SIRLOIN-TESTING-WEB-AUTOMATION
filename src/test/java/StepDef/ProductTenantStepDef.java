@@ -66,7 +66,7 @@ public class ProductTenantStepDef {
         ProductTenantPage productTenant = new ProductTenantPage(webDriver);
         Assert.assertEquals(judulAddProduct, productTenant.getTitleAddProduct());
         System.out.println(judulAddProduct);
-        Thread.sleep(1000);
+        Thread.sleep(3000);
     }
 
     @Given("^user choose photos from directory$")
