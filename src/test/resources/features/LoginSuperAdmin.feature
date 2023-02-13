@@ -1,7 +1,7 @@
 @Login @Capstone
 Feature: Login Sirloin
 
-  @Login @Positif
+  @LoginAdmin @Positif
   Scenario: Login with valid email dan password, and Verify menu super admin only Home, Product, Laporan Penjualan, Profile Super Admin, Logout
     Given user on the sirloinPOS website
     When user click email field

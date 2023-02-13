@@ -24,4 +24,10 @@ public class ProductSuperAdminPage {
         kecapabc.isDisplayed();
         return true ;
     }
+
+    @FindBy(css = "tr:nth-of-type(13) button:nth-of-type(2)")
+    private WebElement editProduct;
+    public void clickEdit(){
+        editProduct.click();
+    }
 }

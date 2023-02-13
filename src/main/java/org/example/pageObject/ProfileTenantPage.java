@@ -45,7 +45,7 @@ public class ProfileTenantPage {
     public String getAlamat(){
         return alamatToko.getText() ;
     }
-    @FindBy(xpath = "//h3[@class='flex m-10 font-bold text-2xl text-[#4AA3BA]']")
+    @FindBy(xpath = "//h3[@class='font-bold text-2xl m-10 text-[#4AA3BA]']")
     private WebElement titleUpdateProfile;
     public String getTitleUpdate(){
         return titleUpdateProfile.getText();

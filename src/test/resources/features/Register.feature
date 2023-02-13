@@ -2,10 +2,10 @@
   Feature: Sirloin register user
     Scenario: Register with valid input
       When user click register field
-      And user input nama bisnis / toko "Toko Berkah Mukhlis"
-      And user input "mukhlisanshori321@gmail.com" as email
+      And user input nama bisnis / toko "Toko Tes Mukhlis"
+      And user input "percobaan1@gmail.com" as email
       And user input password register have value "Mukhlis123"
-      And user input nomor telephone "0825123123"
+      And user input nomor telephone "0825121648"
       And user input "jl malang indonesia raya" as alamat
       And user click register button
 
@@ -58,7 +58,7 @@
     And user click register button
     Then modal is displayed
     And verify title message text is "Gagal Register"
-    And verify massage is "incorrect e-mail format"
+    And verify massage is "incorrect register business email format"
 
     @Register @Negative
     Scenario: Register with invalid format phone number
@@ -71,7 +71,7 @@
       And user click register button
       Then modal is displayed
       And verify title message text is "Gagal Register"
-      And verify massage is "the phone number must be a number"
+      And verify massage is "register business phone number must be a number"
 
 
 

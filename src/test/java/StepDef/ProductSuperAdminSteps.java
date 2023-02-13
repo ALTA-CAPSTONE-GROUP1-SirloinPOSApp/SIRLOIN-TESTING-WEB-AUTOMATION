@@ -25,4 +25,11 @@ public class ProductSuperAdminSteps {
         ProductSuperAdminPage productSuperAdminPage = new ProductSuperAdminPage(webDriver);
         productSuperAdminPage.getKecap() ;
     }
+
+    @And("^admin click edit product$")
+    public void adminClickEditProduct() throws InterruptedException {
+        ProductSuperAdminPage productSuperAdminPage = new ProductSuperAdminPage(webDriver);
+        productSuperAdminPage.clickEdit();
+        Thread.sleep(2000);
+    }
 }
