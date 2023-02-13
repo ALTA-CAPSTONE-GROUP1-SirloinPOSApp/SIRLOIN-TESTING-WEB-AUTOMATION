@@ -61,4 +61,36 @@ public class LaporanTransaksiSteps {
         Thread.sleep(2000);
 
     }
+
+    @And("^user get text no transaksi$")
+    public void userGetTextNoTransaksi() {
+        LaporanTransaksiPage laporanTransaksiPage = new LaporanTransaksiPage(webDriver);
+        laporanTransaksiPage.getTransaksi() ;
+    }
+
+    @And("^user get text status transaksi$")
+    public void userGetTextStatusTransaksi() {
+        LaporanTransaksiPage laporanTransaksiPage = new LaporanTransaksiPage(webDriver);
+        laporanTransaksiPage.getStatus() ;
+    }
+
+    @And("^user verify total transaksi sukses$")
+    public void userVerifyTotalTransaksiSukses() {
+        LaporanTransaksiPage laporanTransaksiPage = new LaporanTransaksiPage(webDriver);
+        System.out.println("Total Transaksi Sukses : "+laporanTransaksiPage.getTotalSukses());
+    }
+
+    @And("^user verify total transaksi$")
+    public void userVerifyTotalTransaksi() {
+        LaporanTransaksiPage laporanTransaksiPage = new LaporanTransaksiPage(webDriver);
+        System.out.println("Total Transaksi : "+laporanTransaksiPage.getTotalTransaksi());
+    }
+
+    @And("^user click send to email$")
+    public void userClickSendToEmail() {
+    }
+
+    @And("^user click print button laporan transaksi$")
+    public void userClickPrintButtonLaporanTransaksi() {
+    }
 }

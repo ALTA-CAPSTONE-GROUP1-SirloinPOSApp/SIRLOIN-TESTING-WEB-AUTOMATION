@@ -95,13 +95,13 @@ public class CustomerPage {
     public void saveDisable(){
         System.out.println("Button is enabled ? : "+tombolSave.isEnabled());
     }
-    @FindBy(xpath = "//tbody[1]/tr[1]//button[@id='edit-custumer']")
+    @FindBy(xpath = "//tbody[1]/tr[1]//button[@class='btn btn-ghost btn-square']")
     private WebElement editMukhlis;
     public void clickEdit(){
         editMukhlis.click();
     }
 
-    @FindBy(xpath = "//button[@id='save-customer']")
+    @FindBy(xpath = "//button[@id='save']")
     private WebElement saveEdit ;
     public void clickSimpanEdit(){
         saveEdit.click();

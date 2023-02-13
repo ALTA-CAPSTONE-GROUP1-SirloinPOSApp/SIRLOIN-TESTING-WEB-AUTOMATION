@@ -48,5 +48,36 @@ public class LaporanTransaksiPage {
         tampilData.click();
     }
 
+    @FindBy(css="tbody > tr:nth-of-type(1) > td:nth-of-type(2)")
+    private WebElement transaksi ;
+    public boolean getTransaksi(){
+        return transaksi.isDisplayed() ;
+    }
+    @FindBy(css = "tbody > tr:nth-of-type(1) > .text-orange-300")
+    private WebElement statusTransaksi ;
+    public boolean getStatus(){
+        return statusTransaksi.isDisplayed() ;
+    }
 
+    @FindBy(xpath = "//button[@id='send-email']")
+    private WebElement sendEmail ;
+    public void sendToEmail(){
+        sendEmail.click();
+    }
+
+    @FindBy(xpath = "//button[@id='pdf']")
+    private WebElement print ;
+    public void clickPrint(){
+        print.click();
+    }
+    @FindBy(css = "tfoot > tr:nth-of-type(1) > th:nth-of-type(5)")
+    private WebElement totalSukses ;
+    public String getTotalSukses(){
+        return totalSukses.getText() ;
+    }
+    @FindBy(css ="tfoot > tr:nth-of-type(2) > th:nth-of-type(5)" )
+    private WebElement totalTransaksi;
+    public String getTotalTransaksi(){
+        return totalTransaksi.getText();
+    }
 }

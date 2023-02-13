@@ -24,7 +24,7 @@ Feature: Product super admin
     Then see modal successfully
     When click OK button modal
     And user click menu product
-    Then verify title menu is "Product Tenant"
+    Then verify title menu is "Product Super Admin"
     And user click button Tambah Product
     And user should be redirect "Tambah Product" page
     Given user choose photos from directory with file name "abc.jpg"
@@ -51,7 +51,29 @@ Feature: Product super admin
     And user click menu product
     And admin verify product kecap is displayed
 
-  @ProductTenant @Negative @Capstone
+  @ProductAdmin @Positif
+  Scenario: verify edit product
+    Given user on the sirloinPOS website
+    When user click email field
+    And user input email "sirloinpos@gmail.com"
+    When user click password field
+    And user input "Amr12345" as password
+    And user click login button
+    Then see modal successfully
+    When click OK button modal
+    And user click menu product
+    And admin click edit product
+    Then user update foto kecap "abcedit.jpg"
+    And user edit kategori kecap "Kecap Hitam"
+    And user edit product name "Kecap ABC Edit"
+    And user update stock product "98"
+    And user edit minimum stock barang "5"
+    And user update harga jual "9000"
+    And user update harga beli "4000"
+    And user click button simpan on edit page
+    And user get message success edit "success update product"
+
+  @ProductAdmin @Negative @Capstone
   Scenario Outline: upload product admin with invalid data input null values
     Given user on the sirloinPOS website
     When user login with input "sirloinpos@gmail.com" as email and "Amr12345" as password

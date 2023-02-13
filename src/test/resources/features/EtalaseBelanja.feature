@@ -1,5 +1,5 @@
 Feature: Feature Etalase Belanja Product
-  @Customer @Positive @Capstone
+  @EtalaseBelanja @Positive @Capstone
   Scenario: Verify menu etalase belanja is enable
     Given user on the sirloinPOS website
     When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
@@ -7,7 +7,7 @@ Feature: Feature Etalase Belanja Product
     Then user click Etalase belanja menu
     And user should be on "Etalase Belanja Product"
 
-  @Customer @Positive @Capstone
+  @EtalaseBelanja @Positive @Capstone
   Scenario: Verify user can choose item from etalase belanja product page
     Given user on the sirloinPOS website
     When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
@@ -19,7 +19,7 @@ Feature: Feature Etalase Belanja Product
     And user click button beli second item
     And verify second item appeared on keranjang feature
 
-  @Customer @Positive @Capstone
+  @EtalaseBelanja @Positive @Capstone
   Scenario: Verify user can click button + and -
     Given user on the sirloinPOS website
     When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
@@ -32,7 +32,7 @@ Feature: Feature Etalase Belanja Product
     And user click button decrement six times
     Then value total items is five
 
-  @Customer @Positive @Capstone
+  @EtalaseBelanja @Positive @Capstone
   Scenario: Verify user can buying item from etalase belanja product page
     Given user on the sirloinPOS website
     When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
@@ -47,7 +47,7 @@ Feature: Feature Etalase Belanja Product
     And user verify total payment
     And user click order button and redirect payment method
 
-  @Customer @Positive @Capstone
+  @EtalaseBelanja @Positive @Capstone
   Scenario: Verify button cancel is enable
     Given user on the sirloinPOS website
     When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
@@ -63,7 +63,7 @@ Feature: Feature Etalase Belanja Product
     And user click cancel button
     And user should be on "Etalase Belanja Product"
 
-  @Customer @Negative @Capstone
+  @EtalaseBelanja @Negative @Capstone
   Scenario: Verify button delete item is enable
     Given user on the sirloinPOS website
     When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
