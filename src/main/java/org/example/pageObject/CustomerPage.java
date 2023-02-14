@@ -101,10 +101,14 @@ public class CustomerPage {
         editMukhlis.click();
     }
 
-    @FindBy(xpath = "//button[@id='save']")
+    @FindBy(xpath = "//button[@id='save-customer']")
     private WebElement saveEdit ;
     public void clickSimpanEdit(){
         saveEdit.click();
     }
-
+    @FindBy(xpath = "//button[@id='save']")
+    private WebElement saveNew;
+    public void clickSaveNew(){
+        saveNew.click();
+    }
 }

@@ -12,7 +12,7 @@ public class ProductSuperAdminPage {
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }
-    @FindBy(xpath = "//h3[@class='font-bold text-2xl text-[#4AA3BA]']")
+    @FindBy(xpath = "//h3[@class='font-bold text-3xl text-[#4AA3BA]']")
     private WebElement productPage ;
     public String getProductPage(){
         return productPage.getText() ;

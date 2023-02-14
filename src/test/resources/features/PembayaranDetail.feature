@@ -97,7 +97,6 @@ Feature: Pembayaran Detail
     And user sort pembayaran list by qris
     Then user click button bayar
     Then see modal scan barcode
-    When click OK button modal scan barcode
 
   @Pembayaran @Capstone @Positive
   Scenario: user will payment with gopay
@@ -122,7 +121,6 @@ Feature: Pembayaran Detail
     And user sort pembayaran list by gopay
     Then user click button bayar
     Then see modal scan barcode
-    When click OK button modal scan barcode
 
   @Pembayaran @Capstone @Positive
   Scenario: user will payment with shopeepay
@@ -147,7 +145,6 @@ Feature: Pembayaran Detail
     And user sort pembayaran list by shopeepay
     Then user click button bayar
     Then see modal scan barcode
-    When click OK button modal scan barcode
 
   @Pembayaran @Capstone @Negative
   Scenario: user orders more product items than stock items

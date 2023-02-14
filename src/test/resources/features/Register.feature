@@ -3,9 +3,9 @@
     Scenario: Register with valid input
       When user click register field
       And user input nama bisnis / toko "Toko Tes Mukhlis"
-      And user input "percobaan1@gmail.com" as email
+      And user input "percobaanlagiiii223@gmail.com" as email
       And user input password register have value "Mukhlis123"
-      And user input nomor telephone "0825121648"
+      And user input nomor telephone "08654242318"
       And user input "jl malang indonesia raya" as alamat
       And user click register button
 

@@ -38,11 +38,11 @@ Feature: Feature customer
     And user should be on list "Daftar Customer"
     And user click button tambah customer
     Then user should be redirect to "Tambah Customer" page
-    And user input name customer "Coba Baru"
-    And user input phone number "0855535346631"
-    And user input email customer "cobaaaa@gmail.com"
-    And user input alamat customer "JL Di sini loh"
-    Then user click simpan customer
+    And user input name customer "Mukhlis Anshori Witantoo"
+    And user input phone number "0827564896287"
+    And user input email customer "cobaaaas4465@gmail.com"
+    And user input alamat customer "JL Di sini loh kok"
+    Then user click simpan new customer
     And user have message Berhasil "success add new customer"
 
   @Customer @Negative @Capstone
@@ -79,7 +79,7 @@ Feature: Feature customer
     And user input phone number "0855111112"
     And user input email customer "andreasbagas@gmail.com"
     And user input alamat customer "JL di kota malang"
-    Then user click simpan customer
+    Then user click simpan new customer
     And user have message Berhasil "register new customer email already exist"
 
 
@@ -96,7 +96,7 @@ Feature: Feature customer
     And user input phone number "08556677889"
     And user input email customer "andreasbagasss@gmail.com"
     And user input alamat customer "JL di kota malang"
-    Then user click simpan customer
+    Then user click simpan new customer
     And user have message Berhasil "update customer phone number already exist"
 
   @Customer @Negative @Capstone
@@ -112,7 +112,7 @@ Feature: Feature customer
     And user input phone number "08553466431"
     And user input email customer "andreasbagas.com"
     And user input alamat customer "JL di kota malang"
-    Then user click simpan customer
+    Then user click simpan new customer
     And user stay on "Tambah Customer" page and get message eror format email
 
   @Customer @Positive @Capstone
@@ -124,9 +124,9 @@ Feature: Feature customer
     And user should be on list "Daftar Customer"
     And user click button edit button customer Mukhlis
     And user change name "Mukhlis Edited"
-    And user change phone number "088796541234"
-    And user change email "mukhlisupdate@gmail.com"
-    And user change alamat "JL Kol Sugiono Mergosono Malang Indonesia"
+    And user change phone number "089654123433"
+    And user change email "mukhlisupdate2@gmail.com"
+    And user change alamat "JL Kol Sugiono Mergosono Malangg "
     Then user click simpan customer
     And user have message Berhasil "success edit customer data"
 

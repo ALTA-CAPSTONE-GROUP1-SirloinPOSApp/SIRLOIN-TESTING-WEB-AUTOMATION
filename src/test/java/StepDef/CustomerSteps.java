@@ -78,12 +78,6 @@ public class CustomerSteps {
         Thread.sleep(3000);
     }
 
-    @And("^user have message Berhasil \"([^\"]*)\"$")
-    public void userHaveMessageBerhasil(String pesan) {
-        CustomerPage customerPage = new CustomerPage(webDriver);
-        customerPage.getSuksesPesan();
-        customerPage.setClickOk();
-    }
 
     @Then("^button simpan is disable$")
     public void buttonSimpanIsDisable() {
@@ -129,4 +123,17 @@ public class CustomerSteps {
         customerPage.editAlamat(alamat);
     }
 
+    @Then("^user click simpan new customer$")
+    public void userClickSimpanNewCustomer() throws InterruptedException {
+        CustomerPage customerPage = new CustomerPage(webDriver);
+        customerPage.clickSaveNew();
+        Thread.sleep(3000);
+    }
+
+    @And("^user have message Berhasil \"([^\"]*)\"$")
+    public void userHaveMessageBerhasil(String Cust) {
+        CustomerPage customerPage = new CustomerPage(webDriver);
+        customerPage.getSuksesPesan();
+        customerPage.setClickOk();
+    }
 }

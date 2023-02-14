@@ -27,19 +27,19 @@ Feature: Product super admin
     Then verify title menu is "Product Super Admin"
     And user click button Tambah Product
     And user should be redirect "Tambah Product" page
-    Given user choose photos from directory with file name "abc.jpg"
-    And user input nomor barcode "123123456789"
-    And user input kategory product "Kecap"
-    And user input supplier "Pabrik Kecap"
-    And user input nama product "Kecap ABC"
-    And user input harga jual "12000"
-    And user input harga beli "9000"
+    Given user choose photos from directory with file name "bimoli.jpg"
+    And user input nomor barcode "123123356749"
+    And user input kategory product "Minyakkk"
+    And user input supplier "Pabrik Minyakkk"
+    And user input nama product "Minyak Bimooliiii"
+    And user input harga jual "40000"
+    And user input harga beli "39000"
     And user input stok product "60"
     And user input minimum stok "5"
     Then user click simpan button
 
   @ProductAdmin @Positif
-  Scenario: verify new product can be displayed
+  Scenario: verify product can be displayed
     Given user on the sirloinPOS website
     When user click email field
     And user input email "sirloinpos@gmail.com"
@@ -63,9 +63,9 @@ Feature: Product super admin
     When click OK button modal
     And user click menu product
     And admin click edit product
-    Then user update foto kecap "abcedit.jpg"
+    Then user update foto kecap "abc.jpg"
     And user edit kategori kecap "Kecap Hitam"
-    And user edit product name "Kecap ABC Edit"
+    And user edit product name "Kecap ABC"
     And user update stock product "98"
     And user edit minimum stock barang "5"
     And user update harga jual "9000"
