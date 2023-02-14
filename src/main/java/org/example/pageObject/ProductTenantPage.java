@@ -162,7 +162,7 @@ public class ProductTenantPage {
         System.out.println("Button simpan is enabled ? "+buttonSave.isEnabled());
     }
 
-    @FindBy(xpath = "//tbody[1]/tr[1]//button[2]")
+    @FindBy(xpath = "//tr[8]//button[2]")
     private WebElement buttonEdit ;
     public void clickEdit(){
         buttonEdit.click();

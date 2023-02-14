@@ -2,7 +2,7 @@ Feature: Product Tenant
   @ProductTenant @Positive @Capstone
     Scenario: Verify menu product enable
     Given user on the sirloinPOS website
-    When user login with input "percobaan1@gmail.com" as email and "Mukhlis123" as password
+    When user login with input "mukhlisanshori321@gmail.com" as email and "Mukhlis123" as password
     And verify succes login title "Berhasil Login"
     And user click menu product
     Then verify title menu is "Product Tenant"
@@ -10,7 +10,7 @@ Feature: Product Tenant
   @ProductTenant @Positive @Capstone
     Scenario: verify buutton tambah product enable
     Given user on the sirloinPOS website
-    When user login with input "percobaan1@gmail.com" as email and "Mukhlis123" as password
+    When user login with input "mukhlisanshori321@gmail.com" as email and "Mukhlis123" as password
     And verify succes login title "Berhasil Login"
     And user click menu product
     Then verify title menu is "Product Tenant"
@@ -21,7 +21,7 @@ Feature: Product Tenant
   @ProductTenant @Positive @Capstone
   Scenario Outline: upload product with valid data input
     Given user on the sirloinPOS website
-    When user login with input "percobaan1@gmail.com" as email and "Mukhlis123" as password
+    When user login with input "mukhlisanshori321@gmail.com" as email and "Mukhlis123" as password
     And verify succes login title "Berhasil Login"
     And user click menu product
     Then verify title menu is "Product Tenant"
@@ -39,16 +39,14 @@ Feature: Product Tenant
     Then user click simpan button
     Examples:
       | foto        | barcode      | kategori | suplier       | nama              | jual  | beli  | stok | minstok |
-      | bimoli.jpg  | 111111223121 | Minyak   | Pabrik Minyak | Minyak Bimoli     | 40000 | 35000 | 100  | 10      |
+      | abc.jpg     | 111111223121 | Kecap    | Pabrik Kecap  | Kecap ABC         | 12000 | 9000  | 100  | 10      |
       | fortune.jpg | 111111223122 | Minyak   | Pabrik Minyak | Minyak Fortune    | 39000 | 33000 | 100  | 10      |
       | jumbo.jpg   | 111111223123 | Mie      | Pabrik Mie    | Mie Indomie Jumbo | 6000  | 4000  | 200  | 20      |
-      | mie.jpg     | 111111223124 | Mie      | Pabrik Mie    | Mie Indomie       | 3500  | 2000  | 200  | 20      |
-      | miesoto.jpg | 111111223125 | Mie      | Pabrik Mie    | Mie Indomie Soto  | 3500  | 2000  | 200  | 20      |
 
   @ProductTenant @Negative @Capstone
   Scenario Outline: upload product with invalid data input null values
     Given user on the sirloinPOS website
-    When user login with input "percobaan1@gmail.com" as email and "Mukhlis123" as password
+    When user login with input "mukhlisanshori321@gmail.com" as email and "Mukhlis123" as password
     And verify succes login title "Berhasil Login"
     And user click menu product
     Then verify title menu is "Product Tenant"
@@ -77,25 +75,25 @@ Feature: Product Tenant
       | miesoto.jpg | 152468521245 | Mie      | Pabrik Mie    | Mie Indomie       | 3500  | 2000  | 200  |         |
 
   @ProductTenant @Positive @Capstone
-  Scenario: Verify button update for Kecap ABC is enabled
+  Scenario: Verify button update for oreo enabled
     Given user on the sirloinPOS website
-    When user login with input "percobaan1@gmail.com" as email and "Mukhlis123" as password
+    When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
     And verify succes login title "Berhasil Login"
     And user click menu product
-    Then user click button edit for Kecap ABC
+    Then user click button edit for oreo
     And user redirect to edit product and verify title is "Edit Product"
 
   @ProductTenant @Positive @Capstone
-  Scenario: Verify feature update for Kecap ABC is enabled with valid value
+  Scenario: Verify feature update for oreo is enabled with valid value
     Given user on the sirloinPOS website
-    When user login with input "percobaan1@gmail.com" as email and "Mukhlis123" as password
+    When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
     And verify succes login title "Berhasil Login"
     And user click menu product
-    Then user click button edit for Kecap ABC
+    Then user click button edit for oreo
     And user redirect to edit product and verify title is "Edit Product"
-    Then user update foto kecap "abcedit.jpg"
-    And user edit kategori kecap "Kecap Hitam"
-    And user edit product name "Kecap ABC Edit"
+    Then user update foto kecap "abc.jpg"
+    And user edit kategori kecap "Oreooo"
+    And user edit product name "Oreo asli"
     And user update stock product "98"
     And user edit minimum stock barang "5"
     And user update harga jual "9000"
@@ -106,7 +104,7 @@ Feature: Product Tenant
   @ProductTenant @Positive @Capstone
   Scenario: upload product with barcode is already used for another product
     Given user on the sirloinPOS website
-    When user login with input "percobaan1@gmail.com" as email and "Mukhlis123" as password
+    When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
     And verify succes login title "Berhasil Login"
     And user click menu product
     Then verify title menu is "Product Tenant"
@@ -116,7 +114,7 @@ Feature: Product Tenant
     And user input nomor barcode "111111223120"
     And user input kategory product "Minuman"
     And user input supplier "Pabrik Teh Gelas"
-    And user input nama product "Teh Gelas"
+    And user input nama product "Teh Gelassss a"
     And user input harga jual "2000"
     And user input harga beli "1000"
     And user input stok product "60"
@@ -127,14 +125,14 @@ Feature: Product Tenant
   @ProductTenant @Negative @Capstone
   Scenario: Verify feature update with barcode is already used
     Given user on the sirloinPOS website
-    When user login with input "percobaan1@gmail.com" as email and "Mukhlis123" as password
+    When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
     And verify succes login title "Berhasil Login"
     And user click menu product
     Then user click button edit for Kecap ABC
     And user redirect to edit product and verify title is "Edit Product"
     Then user update foto kecap "abcedit.jpg"
     And user edit kategori kecap "Kecap Hitam"
-    And user edit barcode with number already used in another product "111111223122"
+    And user edit barcode with number already used in another product "111111223120"
     And user edit product name "Kecap ABC"
     And user update stock product "79"
     And user edit minimum stock barang "5"
@@ -146,7 +144,7 @@ Feature: Product Tenant
   @ProductTenant @Positive @Capstone
   Scenario: Verify feature search field is enable
     Given user on the sirloinPOS website
-    When user login with input "percobaan1@gmail.com" as email and "Mukhlis123" as password
+    When user login with input "mukhlisanshori1997@gmail.com" as email and "Mukhlis11111" as password
     And verify succes login title "Berhasil Login"
     And user click menu product
     Then user input "Kec" from fitur search product tenant

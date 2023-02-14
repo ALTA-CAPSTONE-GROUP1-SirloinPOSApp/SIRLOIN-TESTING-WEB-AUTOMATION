@@ -148,7 +148,7 @@ public class ProductTenantStepDef {
         productTenant.saveDisable();
     }
 
-    @Then("^user click button edit for Kecap ABC$")
+    @Then("^user click button edit for oreo$")
     public void userClickButtonEditForKecapABC() throws InterruptedException {
         ProductTenantPage productTenant = new ProductTenantPage(webDriver);
         productTenant.clickEdit();
@@ -211,7 +211,7 @@ public class ProductTenantStepDef {
     public void userClickButtonSimpanOnEditPage() throws InterruptedException {
         ProductTenantPage productTenant = new ProductTenantPage(webDriver);
         productTenant.clickSave();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
     }
 
     @And("^user get message success edit \"([^\"]*)\"$")
