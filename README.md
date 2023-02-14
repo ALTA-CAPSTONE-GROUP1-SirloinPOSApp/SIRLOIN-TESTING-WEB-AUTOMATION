@@ -9,7 +9,7 @@ SirloinPOS ini proyek untuk membantu setiap toko untuk menjual produk bisnisnya,
 
 ## Documentation Testing
 
-[Manual Testing Documentation](https://docs.google.com/spreadsheets/d/1SsXwybOli05DzAbmcqJNF-ibvDVIHQM7HuWgVPIsu68/edit#gid=341426592)
+[Manual Testing Documentation](https://docs.google.com/spreadsheets/d/1rSrdnB_KoU3hK0kE9iLT0lYpe1NYWuNj7yT5x7NA3yo/edit#gid=341426592)
 
 [Automation Testing Documentation](https://github.com/ALTA-CAPSTONE-GROUP1-SirloinPOSApp/SIRLOIN-TESTING-WEB-AUTOMATION)
 
